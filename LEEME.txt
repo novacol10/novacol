@@ -1,0 +1,14 @@
+PASOS PARA PUBLICAR NOVACOL
+
+1. Pon tus fotos en la carpeta img/ con estos nombres exactos:
+   - foto.jpg   (tu foto, vertical funciona mejor)
+   - gorra.jpg  (foto real de la gorra; mientras no la pongas se muestra una gorra negra temporal)
+   - calle1.jpg ... calle5.jpg  (fotos de futbol callejero / microfutbol para la galeria; calle1 es la grande)
+   - cancha.jpg (opcional: foto de fondo de la seccion de comunidad)
+   Usa fotos tuyas o de tus jugadores. Si descargas de bancos gratis (Unsplash, Pexels), revisa su licencia.
+2. Sube la carpeta completa a un hosting gratis (Netlify Drop: app.netlify.com/drop, o GitHub Pages).
+3. IMPORTANTE: haz un pedido de prueba desde la pagina YA publicada. FormSubmit enviara un correo
+   de activacion a jhons.nova@gmail.com. Pulsa el boton de confirmacion (revisa spam).
+   El formulario no funciona abriendo el archivo directo en el computador, solo desde la pagina publicada.
+
+PRECIO: en index.html busca "$50.000" y data-valor="50000" para cambiarlo.
