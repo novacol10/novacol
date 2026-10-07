@@ -1,2539 +1,2447 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
-<!-- =========================
-     SEO PRINCIPAL
-========================= -->
-<title>NOVACOL | Comunidad de fútbol y microfútbol en Colombia</title>
-
-<meta name="description" content="NOVACOL es la comunidad de fútbol y microfútbol creada por Sebastián Nova. Retos 1 vs 1, jugadas, partidos, eventos y productos para quienes viven el fútbol.">
-
-<meta name="keywords" content="NOVACOL, Novacol10, Sebastián Nova, microfútbol, fútbol, fútbol Colombia, microfútbol Colombia, fútbol callejero, retos 1 vs 1, fútbol 1 vs 1">
-
-<meta name="author" content="Sebastián Nova - NOVACOL">
-
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-<link rel="canonical" href="https://novacol10.com/">
-
-<meta name="theme-color" content="#000000">
-
-<!-- =========================
-     OPEN GRAPH
-========================= -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="NOVACOL">
-<meta property="og:title" content="NOVACOL | Comunidad de fútbol y microfútbol">
-<meta property="og:description" content="La comunidad de fútbol creada por Sebastián Nova. Retos, jugadas, partidos, eventos y cultura futbolera.">
-<meta property="og:url" content="https://novacol10.com/">
-<meta property="og:locale" content="es_CO">
-<meta property="og:image" content="https://novacol10.com/img/foto.jpg">
-<meta property="og:image:alt" content="Sebastián Nova - NOVACOL">
-
-<!-- =========================
-     TWITTER / X
-========================= -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NOVACOL | Comunidad de fútbol y microfútbol">
-<meta name="twitter:description" content="Retos, fútbol, microfútbol y comunidad. Conoce NOVACOL.">
-<meta name="twitter:image" content="https://novacol10.com/img/foto.jpg">
-
-<!-- =========================
-     ICONO
-========================= -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚽%3C/text%3E%3C/svg%3E">
-
-<!-- =========================
-     FUENTES
-========================= -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- =========================
-     DATOS ESTRUCTURADOS
-========================= -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "NOVACOL",
-  "alternateName": "NOVACOL10",
-  "url": "https://novacol10.com/",
-  "logo": "https://novacol10.com/img/foto.jpg",
-  "description": "Comunidad de fútbol y microfútbol creada por Sebastián Nova.",
-  "founder": {
-    "@type": "Person",
-    "name": "Sebastián Nova",
-    "alternateName": "Novacol10"
-  },
-  "sameAs": [
-    "https://instagram.com/novacol10_",
-    "https://tiktok.com/@novacol10",
-    "https://www.youtube.com/@Novacol10"
-  ]
-}
-</script>
-
-<style>
-:root{
-  --acc:#ffffff;
-  --acc-ink:#0a0a0a;
-  --text:#ffffff;
-  --muted:#a1a1aa;
-  --line:rgba(255,255,255,.14);
-  --glass:rgba(255,255,255,.05);
-  --ease:cubic-bezier(.2,.8,.2,1);
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-}
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:76px;
-}
-
-body{
-  font-family:Inter,system-ui,sans-serif;
-  background:#000;
-  color:var(--text);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-  background-image:
-    radial-gradient(55% 35% at 85% 0%,rgba(255,255,255,.09),transparent 70%),
-    radial-gradient(40% 25% at 0% 45%,rgba(255,255,255,.05),transparent 70%);
-}
-
-body.modal-open{
-  overflow:hidden;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-img{
-  max-width:100%;
-}
-
-::selection{
-  background:#fff;
-  color:#000;
-}
-
-.w{
-  max-width:1120px;
-  margin:0 auto;
-  padding:0 24px;
-}
-
-.acc{
-  color:#fff;
-}
-
-/* PROGRESO */
-
-#prog{
-  position:fixed;
-  top:0;
-  left:0;
-  height:3px;
-  width:100%;
-  background:#fff;
-  transform-origin:0 50%;
-  transform:scaleX(0);
-  z-index:100;
-}
-
-/* NAV */
-
-nav{
-  position:sticky;
-  top:0;
-  z-index:40;
-  background:rgba(0,0,0,.55);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border-bottom:1px solid transparent;
-  transition:.3s;
-}
-
-nav.scrolled{
-  background:rgba(0,0,0,.88);
-  border-color:var(--line);
-}
-
-nav .w{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  height:68px;
-}
-
-.logo{
-  font:700 20px 'Space Grotesk';
-  letter-spacing:.04em;
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-.logo i{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:#fff;
-  box-shadow:0 0 14px #fff;
-}
-
-.links{
-  display:flex;
-  gap:6px;
-  align-items:center;
-  font-size:14px;
-  color:var(--muted);
-}
-
-.links a:not(.pill){
-  padding:8px 12px;
-  border-radius:999px;
-  transition:.2s;
-}
-
-.links a:not(.pill):hover{
-  color:#fff;
-  background:var(--glass);
-}
-
-.links a.on{
-  color:#fff;
-  background:rgba(255,255,255,.08);
-}
-
-.pill{
-  border:1px solid var(--line);
-  background:var(--glass);
-  padding:8px 16px;
-  border-radius:999px;
-  font-size:14px;
-  font-weight:500;
-  color:#fff;
-  margin-left:8px;
-}
-
-.pill:hover{
-  background:rgba(255,255,255,.14);
-}
-
-.burger{
-  display:none;
-  width:44px;
-  height:44px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  background:var(--glass);
-  cursor:pointer;
-  position:relative;
-}
-
-.burger span{
-  position:absolute;
-  left:12px;
-  right:12px;
-  height:2px;
-  background:#fff;
-  border-radius:2px;
-  transition:.3s;
-}
-
-.burger span:nth-child(1){top:15px}
-.burger span:nth-child(2){top:21px}
-.burger span:nth-child(3){top:27px}
-
-nav.open .burger span:nth-child(1){
-  transform:translateY(6px) rotate(45deg);
-}
-
-nav.open .burger span:nth-child(2){
-  opacity:0;
-}
-
-nav.open .burger span:nth-child(3){
-  transform:translateY(-6px) rotate(-45deg);
-}
-
-/* BOTONES */
-
-.btn{
-  position:relative;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  border:0;
-  cursor:pointer;
-  font:600 15px Inter;
-  padding:14px 28px;
-  border-radius:999px;
-  background:#fff;
-  color:#000;
-  transition:.25s;
-  text-align:center;
-  overflow:hidden;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 34px rgba(255,255,255,.3);
-}
-
-.btn.ghost{
-  background:transparent;
-  color:#fff;
-  border:1px solid var(--line);
-}
-
-.btn.ghost:hover{
-  background:var(--glass);
-  box-shadow:none;
-}
-
-.btn .ar{
-  transition:.2s;
-}
-
-.btn:hover .ar{
-  transform:translateX(4px);
-}
-
-/* HERO */
-
-.hero{
-  padding:64px 0 88px;
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:56px;
-  align-items:center;
-  position:relative;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  right:-90px;
-  top:-10px;
-  width:560px;
-  height:560px;
-  background:
-    radial-gradient(circle,transparent 36%,rgba(255,255,255,.08) 37%,transparent 38%);
-  opacity:.8;
-  pointer-events:none;
-}
-
-.hero h1{
-  font:700 clamp(58px,11.5vw,132px)/.92 'Space Grotesk';
-  letter-spacing:-.045em;
-  background:linear-gradient(180deg,#fff 40%,#9a9a9a);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-
-.hero h2{
-  font:500 clamp(20px,2.6vw,28px)/1.3 'Space Grotesk';
-  color:#d4d4d8;
-  margin:20px 0 14px;
-}
-
-.hero p{
-  max-width:50ch;
-  color:var(--muted);
-}
-
-.tag{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  border:1px solid var(--line);
-  background:var(--glass);
-  border-radius:999px;
-  padding:6px 14px;
-  font-size:13px;
-  color:#d4d4d8;
-  margin-bottom:22px;
-}
-
-.tag .dot{
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:#fff;
-  box-shadow:0 0 12px #fff;
-}
-
-.btns{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:32px;
-}
-
-.photo{
-  aspect-ratio:4/5;
-  border-radius:28px;
-  border:1px solid var(--line);
-  background:linear-gradient(160deg,#1c1c1c,#0a0a0a);
-  overflow:hidden;
-  position:relative;
-  box-shadow:0 0 90px rgba(255,255,255,.12);
-}
-
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-.chip{
-  position:absolute;
-  left:16px;
-  bottom:16px;
-  background:rgba(0,0,0,.7);
-  backdrop-filter:blur(10px);
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:10px 14px;
-  font-size:13px;
-}
-
-.chip b{
-  display:block;
-  font:700 16px 'Space Grotesk';
-}
-
-/* SECCIONES */
-
-section{
-  padding:96px 0;
-}
-
-h3.t{
-  font:700 clamp(32px,5vw,52px)/1.05 'Space Grotesk';
-  letter-spacing:-.035em;
-  margin-bottom:10px;
-}
-
-.sub{
-  color:var(--muted);
-  max-width:56ch;
-  margin-bottom:40px;
-}
-
-.band{
-  background:#111;
-  border-block:1px solid #262626;
-}
-
-.band.alt{
-  background:#1a1a1a;
-}
-
-.box{
-  background:var(--glass);
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:28px;
-  transition:.25s;
-}
-
-.box:hover{
-  border-color:rgba(255,255,255,.4);
-  transform:translateY(-4px);
-}
-
-/* FUNDADOR */
-
-.about{
-  display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:56px;
-  align-items:center;
-}
-
-.about-img{
-  aspect-ratio:1;
-  border-radius:28px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:#111;
-}
-
-.about-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.about-copy h4{
-  font:700 clamp(32px,5vw,58px)/1 'Space Grotesk';
-  letter-spacing:-.04em;
-  margin-bottom:18px;
-}
-
-.about-copy p{
-  color:var(--muted);
-  max-width:60ch;
-  margin-bottom:16px;
-}
-
-.quote{
-  margin-top:26px;
-  padding:20px 24px;
-  border-left:3px solid #fff;
-  background:rgba(255,255,255,.04);
-  color:#fff;
-  font:600 18px 'Space Grotesk';
-}
-
-/* VIDEO */
-
-#video{
-  padding:72px 0 96px;
-}
-
-.vhead{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:20px;
-  flex-wrap:wrap;
-  margin-bottom:28px;
-}
-
-.vframe{
-  position:relative;
-  aspect-ratio:16/9;
-  border-radius:28px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:#000 url(https://i.ytimg.com/vi/LFR0kula7ls/hqdefault.jpg) center/cover;
-  box-shadow:0 30px 80px rgba(0,0,0,.6);
-}
-
-.vframe iframe{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  border:0;
-}
-
-.vpre{
-  position:absolute;
-  inset:0;
-  display:grid;
-  place-items:center;
-  border:0;
-  cursor:pointer;
-  background:rgba(0,0,0,.35);
-}
-
-.vpre span{
-  width:84px;
-  height:84px;
-  border-radius:50%;
-  background:#fff;
-  color:#000;
-  display:grid;
-  place-items:center;
-  font-size:30px;
-}
-
-.vframe.on .vpre{
-  display:none;
-}
-
-.vbtn{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  border:1px solid var(--line);
-  background:rgba(0,0,0,.45);
-  color:#fff;
-  font:500 13px Inter;
-  padding:8px 14px;
-  border-radius:999px;
-}
-
-/* MARQUESINA */
-
-.marq{
-  border-block:1px solid var(--line);
-  overflow:hidden;
-  background:#fff;
-  color:#000;
-}
-
-.marq div{
-  display:flex;
-  width:max-content;
-  animation:m 28s linear infinite;
-  font:700 22px 'Space Grotesk';
-  letter-spacing:.04em;
-  padding:14px 0;
-}
-
-.marq span{
-  padding:0 28px;
-  white-space:nowrap;
-}
-
-@keyframes m{
-  to{transform:translateX(-50%)}
-}
-
-/* COMUNIDAD */
-
-.micro{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:40px;
-  align-items:center;
-}
-
-.big{
-  font:700 clamp(38px,6vw,76px)/.98 'Space Grotesk';
-  letter-spacing:-.045em;
-}
-
-.big em{
-  font-style:normal;
-  color:transparent;
-  -webkit-text-stroke:1.5px #fff;
-}
-
-.list{
-  display:grid;
-  gap:14px;
-}
-
-.list .box{
-  padding:20px 24px;
-  display:flex;
-  gap:16px;
-  align-items:center;
-}
-
-.list .ic{
-  width:46px;
-  height:46px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  display:grid;
-  place-items:center;
-  flex:none;
-  background:rgba(255,255,255,.06);
-  font-size:22px;
-}
-
-.list h4{
-  font:600 20px 'Space Grotesk';
-  margin-bottom:6px;
-}
-
-.list p{
-  color:var(--muted);
-  font-size:15px;
-}
-
-/* PRODUCTO */
-
-.prod{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  border:1px solid #3a3a3a;
-  border-radius:32px;
-  overflow:hidden;
-  background:linear-gradient(145deg,#1f1f1f,#121212);
-  box-shadow:0 30px 80px rgba(0,0,0,.55);
-}
-
-.pimg{
-  position:relative;
-  min-height:440px;
-  background:radial-gradient(circle at 50% 40%,#4a4a4a,#262626 70%,#1c1c1c);
-  overflow:hidden;
-}
-
-.pimg img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-
-.promo{
-  position:absolute;
-  top:18px;
-  left:18px;
-  z-index:2;
-  background:#fff;
-  color:#000;
-  font:700 14px 'Space Grotesk';
-  padding:9px 16px;
-  border-radius:999px;
-}
-
-.pinfo{
-  padding:44px;
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-  justify-content:center;
-}
-
-.pinfo .brand{
-  font:700 12px 'Space Grotesk';
-  letter-spacing:.3em;
-  color:var(--muted);
-}
-
-.pinfo h4{
-  font:700 34px 'Space Grotesk';
-  line-height:1.1;
-}
-
-.pinfo .now{
-  font:700 52px 'Space Grotesk';
-}
-
-.pinfo ul{
-  list-style:none;
-  padding:0;
-  display:grid;
-  gap:10px;
-  color:#d4d4d8;
-  font-size:15px;
-}
-
-.pinfo li::before{
-  content:"✓";
-  margin-right:10px;
-  font-weight:700;
-}
-
-.btn-cta{
-  width:100%;
-  padding:18px 28px;
-  font-size:16px;
-}
-
-.perks{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.perks span{
-  font-size:12.5px;
-  color:#d4d4d8;
-  padding:6px 12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  background:var(--glass);
-}
-
-.note{
-  font-size:13px;
-  color:var(--muted);
-}
-
-/* REDES */
-
-.soc{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.soc a{
-  display:flex;
-  align-items:center;
-  gap:16px;
-  padding:26px;
-}
-
-.soc a>div{
-  flex:1;
-}
-
-.soc b{
-  font:700 22px 'Space Grotesk';
-  display:block;
-}
-
-.soc small{
-  color:var(--muted);
-  font-size:14px;
-}
-
-.si{
-  width:56px;
-  height:56px;
-  border-radius:16px;
-  display:grid;
-  place-items:center;
-  flex:none;
-  background:rgba(255,255,255,.08);
-  border:1px solid var(--line);
-}
-
-.si svg{
-  width:28px;
-  height:28px;
-}
-
-.arrow{
-  font-size:22px;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  border:1px solid var(--line);
-  display:grid;
-  place-items:center;
-}
-
-/* FOOTER */
-
-footer{
-  border-top:1px solid var(--line);
-  color:var(--muted);
-  text-align:center;
-  padding:32px 24px;
-  font-size:14px;
-}
-
-footer a{
-  color:#fff;
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-
-/* TOP */
-
-#top{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  z-index:30;
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  border:1px solid var(--line);
-  background:rgba(0,0,0,.75);
-  color:#fff;
-  font-size:20px;
-  cursor:pointer;
-  opacity:0;
-  transform:translateY(16px);
-  pointer-events:none;
-  transition:.3s;
-}
-
-#top.show{
-  opacity:1;
-  transform:none;
-  pointer-events:auto;
-}
-
-#top:hover{
-  background:#fff;
-  color:#000;
-}
-
-/* ANIMACIONES */
-
-.rv{
-  opacity:0;
-  transform:translateY(28px);
-  transition:opacity .8s var(--ease),transform .8s var(--ease);
-  transition-delay:var(--d,0s);
-}
-
-.rv.in{
-  opacity:1;
-  transform:none;
-}
-
-/* MODAL */
-
-dialog{
-  background:#0c0c0e;
-  color:#fff;
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:0;
-  max-width:460px;
-  width:calc(100% - 32px);
-  box-shadow:0 30px 80px rgba(0,0,0,.6);
-}
-
-dialog::backdrop{
-  background:rgba(0,0,0,.78);
-  backdrop-filter:blur(4px);
-}
-
-.mhead{
-  display:flex;
-  gap:14px;
-  align-items:center;
-  padding:24px 28px 0;
-}
-
-.mhead h5{
-  font:700 22px 'Space Grotesk';
-}
-
-.mhead p{
-  color:var(--muted);
-  font-size:14px;
-}
-
-.x{
-  margin-left:auto;
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  border:1px solid var(--line);
-  background:var(--glass);
-  color:#fff;
-  cursor:pointer;
-}
-
-form{
-  padding:20px 28px 28px;
-  display:grid;
-  gap:14px;
-}
-
-.f{
-  display:grid;
-  gap:6px;
-}
-
-.f label{
-  font-size:13px;
-  color:#d4d4d8;
-}
-
-input{
-  font:16px Inter;
-  padding:12px 14px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:#000;
-  color:#fff;
-  width:100%;
-}
-
-input:focus{
-  border-color:#fff;
-  outline:2px solid rgba(255,255,255,.15);
-}
-
-.row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-
-.qty{
-  display:flex;
-  align-items:center;
-  border:1px solid var(--line);
-  border-radius:12px;
-  overflow:hidden;
-  background:#000;
-}
-
-.qty button{
-  width:44px;
-  height:46px;
-  border:0;
-  background:transparent;
-  color:#fff;
-  font-size:20px;
-  cursor:pointer;
-}
-
-.qty input{
-  border:0;
-  border-radius:0;
-  text-align:center;
-}
-
-.total{
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
-  border-top:1px solid var(--line);
-  padding-top:14px;
-}
-
-#total{
-  font:700 24px 'Space Grotesk';
-}
-
-.msg{
-  font-size:14px;
-  min-height:20px;
-}
-
-.msg.err{
-  color:#ff6b7a;
-}
-
-.done{
-  padding:40px 28px;
-  text-align:center;
-  display:none;
-}
-
-dialog.sent form,
-dialog.sent .mhead{
-  display:none;
-}
-
-dialog.sent .done{
-  display:block;
-}
-
-/* TOAST */
-
-#toast{
-  position:fixed;
-  left:50%;
-  bottom:24px;
-  z-index:70;
-  transform:translate(-50%,150%);
-  background:#fff;
-  color:#000;
-  padding:12px 20px;
-  border-radius:999px;
-  font-weight:600;
-  transition:.4s;
-}
-
-#toast.show{
-  transform:translate(-50%,0);
-}
-
-/* MOBILE */
-
-@media(max-width:860px){
-
-  nav .w{
-    height:62px;
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>NOVACOL | Sebastián Nova | Comunidad de microfútbol en Colombia</title>
+
+  <meta
+    name="description"
+    content="NOVACOL, la comunidad de microfútbol creada por Sebastián Nova. Futsal, fútbol, retos 1 vs 1, jugadas, comunidad y productos NOVACOL."
+  />
+
+  <meta name="author" content="Sebastián Nova" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#000000" />
+
+  <link rel="canonical" href="https://novacol10.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CO" />
+  <meta property="og:site_name" content="NOVACOL" />
+  <meta property="og:url" content="https://novacol10.com/" />
+  <meta property="og:title" content="NOVACOL | Sebastián Nova | Comunidad de microfútbol" />
+  <meta
+    property="og:description"
+    content="La comunidad de microfútbol creada por Sebastián Nova. Futsal, fútbol, retos 1 vs 1, jugadas y comunidad."
+  />
+  <meta property="og:image" content="https://novacol10.com/img/foto.jpg" />
+  <meta property="og:image:alt" content="Sebastián Nova - NOVACOL" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NOVACOL | Sebastián Nova" />
+  <meta
+    name="twitter:description"
+    content="Comunidad de microfútbol, futsal, fútbol y retos 1 vs 1 creada por Sebastián Nova."
+  />
+  <meta name="twitter:image" content="https://novacol10.com/img/foto.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Datos estructurados para Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://novacol10.com/#sebastian-nova",
+        "name": "Sebastián Nova",
+        "url": "https://novacol10.com/",
+        "jobTitle": "Creador de contenido deportivo",
+        "sameAs": [
+          "https://www.instagram.com/novacol10_/",
+          "https://www.tiktok.com/@novacol10",
+          "https://www.youtube.com/@Novacol10"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://novacol10.com/#organization",
+        "name": "NOVACOL",
+        "url": "https://novacol10.com/",
+        "sameAs": [
+          "https://www.instagram.com/novacol10_/",
+          "https://www.tiktok.com/@novacol10",
+          "https://www.youtube.com/@Novacol10"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://novacol10.com/#website",
+        "url": "https://novacol10.com/",
+        "name": "NOVACOL",
+        "description": "Comunidad de microfútbol creada por Sebastián Nova."
+      },
+      {
+        "@type": "Product",
+        "name": "Gorra NOVACOL",
+        "image": [
+          "https://novacol10.com/img/gorra.jpg"
+        ],
+        "brand": {
+          "@type": "Brand",
+          "name": "NOVACOL"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "COP",
+          "price": "50000",
+          "url": "https://novacol10.com/#productos"
+        }
+      }
+    ]
   }
+  </script>
 
-  .burger{
-    display:block;
-  }
+  <style>
+    :root {
+      --bg: #000;
+      --bg-soft: #080808;
+      --card: #0d0d0d;
+      --card-2: #111;
+      --white: #fff;
+      --text: #f5f5f5;
+      --muted: #9c9c9c;
+      --muted-2: #6e6e6e;
+      --line: rgba(255,255,255,.11);
+      --line-strong: rgba(255,255,255,.22);
+      --acc: #fff;
+      --radius: 24px;
+      --max: 1180px;
+    }
 
-  .links{
-    position:absolute;
-    top:62px;
-    left:0;
-    right:0;
-    flex-direction:column;
-    align-items:stretch;
-    gap:4px;
-    padding:12px 16px 20px;
-    background:rgba(0,0,0,.96);
-    border-bottom:1px solid var(--line);
-    visibility:hidden;
-    transform:translateY(-10px);
-    opacity:0;
-    transition:.25s;
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  nav.open .links{
-    visibility:visible;
-    transform:none;
-    opacity:1;
-  }
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+      overflow-x: hidden;
+    }
 
-  .links a:not(.pill){
-    padding:14px 12px;
-  }
+    body {
+      width: 100%;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 50% -20%, rgba(255,255,255,.07), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
 
-  .pill{
-    margin:8px 0 0;
-    text-align:center;
-    padding:12px;
-  }
+    img,
+    video,
+    iframe {
+      max-width: 100%;
+    }
 
-  .hero,
-  .prod,
-  .micro,
-  .soc,
-  .about{
-    grid-template-columns:1fr;
-  }
+    img {
+      display: block;
+    }
 
-  .hero{
-    gap:36px;
-    padding:32px 0 72px;
-  }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  .photo{
-    max-width:340px;
-    width:100%;
-    margin:auto;
-    order:-1;
-  }
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
 
-  section{
-    padding:68px 0;
-  }
+    button {
+      cursor: pointer;
+    }
 
-  .pimg{
-    min-height:320px;
-  }
+    section {
+      width: 100%;
+      position: relative;
+    }
 
-  .pinfo{
-    padding:28px;
-  }
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
 
-  .pinfo h4{
-    font-size:28px;
-  }
+    /* =========================
+       SCROLL PROGRESS
+    ========================== */
 
-  .about{
-    gap:30px;
-  }
+    .scroll-progress {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: #fff;
+    }
 
-  .about-img{
-    max-width:420px;
-  }
-}
+    /* =========================
+       NAV
+    ========================== */
 
-@media(max-width:480px){
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: 76px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.76);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
 
-  .w{
-    padding:0 16px;
-  }
+    .nav-inner {
+      width: min(calc(100% - 40px), var(--max));
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-  .btns .btn{
-    flex:1 1 100%;
-  }
+    .logo {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -.07em;
+      white-space: nowrap;
+    }
 
-  .soc a{
-    padding:22px;
-  }
+    .logo span {
+      opacity: .45;
+    }
 
-  .row{
-    grid-template-columns:1fr;
-  }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 13px;
+      color: #bdbdbd;
+    }
 
-  .mhead,
-  form{
-    padding-left:20px;
-    padding-right:20px;
-  }
-}
+    .nav-links a {
+      transition: color .25s ease;
+    }
 
-@media(prefers-reduced-motion:reduce){
+    .nav-links a:hover {
+      color: #fff;
+    }
 
-  *,
-  *::before,
-  *::after{
-    animation:none!important;
-    transition:none!important;
-    scroll-behavior:auto!important;
-  }
+    .nav-instagram {
+      color: #fff !important;
+      border: 1px solid rgba(255,255,255,.25);
+      padding: 10px 15px;
+      border-radius: 100px;
+    }
 
-  .rv{
-    opacity:1;
-    transform:none;
-  }
-}
-</style>
+    .menu-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #0b0b0b;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu-btn span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: #fff;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+      padding: 140px 0 80px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      min-width: 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      padding: 8px 13px;
+      border-radius: 999px;
+      color: #cfcfcf;
+      font-size: 12px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(65px, 10vw, 138px);
+      line-height: .82;
+      letter-spacing: -.085em;
+      font-weight: 700;
+      margin-bottom: 25px;
+      word-break: normal;
+    }
+
+    .hero h2 {
+      max-width: 680px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(25px, 3.2vw, 43px);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .founder-line {
+      display: inline-block;
+      font-size: 13px;
+      color: #bdbdbd;
+      margin-bottom: 16px;
+      padding-left: 1px;
+    }
+
+    .founder-line strong {
+      color: #fff;
+    }
+
+    .hero p {
+      max-width: 570px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      border-radius: 14px;
+      border: 1px solid var(--line-strong);
+      font-weight: 700;
+      font-size: 13px;
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,.03);
+      color: #fff;
+    }
+
+    .hero-photo {
+      position: relative;
+      width: 100%;
+      max-width: 530px;
+      margin-left: auto;
+    }
+
+    .hero-photo::before {
+      content: "";
+      position: absolute;
+      inset: 8% -8% -8% 8%;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 35px;
+      transform: rotate(4deg);
+    }
+
+    .hero-photo-inner {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      aspect-ratio: 4 / 5;
+      background: #111;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* =========================
+       MARQUEE
+    ========================== */
+
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+      white-space: nowrap;
+      background: rgba(255,255,255,.015);
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      gap: 35px;
+      min-width: max-content;
+      animation: marquee 22s linear infinite;
+    }
+
+    .marquee-item {
+      color: #8c8c8c;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+    }
+
+    .marquee-item strong {
+      color: #fff;
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      padding: 110px 0 30px;
+    }
+
+    .about-box {
+      max-width: 920px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: block;
+      color: #777;
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(35px, 5vw, 62px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      margin-bottom: 22px;
+    }
+
+    .about-box p {
+      max-width: 780px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .about-box strong {
+      color: #fff;
+    }
+
+    /* =========================
+       GENERIC SECTIONS
+    ========================== */
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .section-head {
+      margin-bottom: 42px;
+    }
+
+    .section-head .section-title {
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      max-width: 650px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       PRODUCT
+    ========================== */
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .product-image-wrap {
+      min-width: 0;
+      perspective: 1000px;
+    }
+
+    .pimg {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      max-width: 570px;
+      margin: auto;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(255,255,255,.09), transparent 45%),
+        #080808;
+      overflow: hidden;
+    }
+
+    .pimg::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 22px;
+    }
+
+    .tilt {
+      position: absolute;
+      inset: 9%;
+      transform: rotate(-3deg);
+      transition: transform .5s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .pimg:hover .tilt {
+      transform: rotate(2deg) scale(1.03);
+    }
+
+    .pimg img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 25px 35px rgba(0,0,0,.65));
+    }
+
+    .product-info {
+      min-width: 0;
+    }
+
+    .product-info h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(35px, 5vw, 58px);
+      line-height: .95;
+      letter-spacing: -.055em;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .product-info > p {
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 500px;
+      margin-bottom: 26px;
+    }
+
+    .product-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.025);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: #aaa;
+      font-size: 11px;
+    }
+
+    /* =========================
+       VIDEO
+    ========================== */
+
+    .video-section {
+      padding: 80px 0 110px;
+    }
+
+    .video-box {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background: #050505;
+      aspect-ratio: 16 / 9;
+      box-shadow: 0 30px 80px rgba(0,0,0,.45);
+    }
+
+    .video-box iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-label {
+      position: absolute;
+      z-index: 5;
+      top: 18px;
+      left: 18px;
+      pointer-events: none;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.65);
+      backdrop-filter: blur(10px);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      color: #ddd;
+    }
+
+    /* =========================
+       COMMUNITY
+    ========================== */
+
+    .community {
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.55), rgba(0,0,0,.82)),
+        url("img/cancha.jpg") center/cover no-repeat;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .community-content {
+      max-width: 700px;
+    }
+
+    .community h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: .95;
+      letter-spacing: -.065em;
+      margin-bottom: 22px;
+    }
+
+    .community p {
+      color: #ccc;
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 620px;
+      margin-bottom: 25px;
+    }
+
+    /* =========================
+       SOCIALS
+    ========================== */
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .social-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.01));
+      transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .social-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,.28);
+    }
+
+    .social-card small {
+      display: block;
+      color: #777;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      margin-bottom: 12px;
+    }
+
+    .social-card h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .social-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .social-card span {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       FAQ
+    ========================== */
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+    }
+
+    details:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 24px;
+      font-weight: 400;
+      color: #777;
+      flex-shrink: 0;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      color: var(--muted);
+      line-height: 1.7;
+      padding: 0 0 22px;
+      max-width: 760px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 45px 0;
+      margin-top: 20px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-logo {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -.06em;
+    }
+
+    footer p {
+      color: #666;
+      font-size: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .footer-links a {
+      color: #888;
+      font-size: 11px;
+    }
+
+    /* =========================
+       DIALOG / FORM
+    ========================== */
+
+    dialog {
+      width: min(560px, calc(100% - 28px));
+      max-height: calc(100svh - 28px);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 25px;
+      background: #0b0b0b;
+      color: #fff;
+      padding: 0;
+      margin: auto;
+      overflow: auto;
+      box-shadow: 0 30px 100px rgba(0,0,0,.7);
+    }
+
+    dialog::backdrop {
+      background: rgba(0,0,0,.78);
+      backdrop-filter: blur(8px);
+    }
+
+    .modal-content {
+      padding: 30px;
+    }
+
+    .modal-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .modal-top h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .modal-top p {
+      color: #777;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .close-modal {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: #111;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      min-width: 0;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      display: block;
+      color: #aaa;
+      font-size: 11px;
+      margin-bottom: 7px;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      min-width: 0;
+      border: 1px solid rgba(255,255,255,.12);
+      background: #111;
+      color: #fff;
+      border-radius: 12px;
+      padding: 13px 14px;
+      outline: none;
+    }
+
+    .field textarea {
+      min-height: 85px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: rgba(255,255,255,.45);
+    }
+
+    .consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      margin: 17px 0;
+      color: #777;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .consent input {
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: #fff;
+    }
+
+    .form-submit {
+      width: 100%;
+      border: 0;
+      background: #fff;
+      color: #000;
+      min-height: 50px;
+      border-radius: 13px;
+      font-weight: 800;
+    }
+
+    /* =========================
+       REVEAL
+    ========================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       TABLET
+    ========================== */
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-photo {
+        margin: 15px auto 0;
+        max-width: 620px;
+      }
+
+      .product-image-wrap {
+        order: 1;
+      }
+
+      .product-info {
+        order: 2;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        gap: 17px;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 700px) {
+
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: calc(100% - 28px);
+        max-width: 100%;
+      }
+
+      nav {
+        height: 66px;
+      }
+
+      .nav-inner {
+        width: calc(100% - 28px);
+      }
+
+      .logo {
+        font-size: 22px;
+      }
+
+      .menu-btn {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 66px;
+        left: 14px;
+        right: 14px;
+        width: auto;
+        padding: 15px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(8,8,8,.97);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        box-shadow: 0 20px 50px rgba(0,0,0,.55);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 13px 12px;
+        border-radius: 10px;
+      }
+
+      .nav-instagram {
+        text-align: center;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 110px 0 55px;
+      }
+
+      .hero-grid {
+        gap: 45px;
+      }
+
+      .tag {
+        font-size: 10px;
+        max-width: 100%;
+      }
+
+      .hero h1 {
+        font-size: clamp(61px, 19vw, 95px);
+        line-height: .83;
+        letter-spacing: -.09em;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      .hero h2 {
+        font-size: clamp(27px, 8.5vw, 38px);
+        line-height: 1.02;
+        max-width: 100%;
+      }
+
+      .founder-line {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .hero p {
+        font-size: 14px;
+        line-height: 1.65;
+        margin-bottom: 23px;
+      }
+
+      .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .hero-photo {
+        width: calc(100% - 12px);
+      }
+
+      .hero-photo::before {
+        inset: 7% -4% -5% 5%;
+      }
+
+      .hero-photo-inner {
+        border-radius: 23px;
+      }
+
+      .marquee {
+        padding: 14px 0;
+      }
+
+      .marquee-track {
+        gap: 22px;
+      }
+
+      .about {
+        padding: 75px 0 20px;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .section-title {
+        font-size: clamp(35px, 12vw, 50px);
+      }
+
+      .about-box p,
+      .section-description {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .product-grid {
+        gap: 35px;
+      }
+
+      .pimg {
+        border-radius: 22px;
+      }
+
+      .product-info h3 {
+        font-size: clamp(38px, 13vw, 55px);
+      }
+
+      .product-info > p {
+        font-size: 14px;
+      }
+
+      .price {
+        font-size: 24px;
+      }
+
+      .video-section {
+        padding: 45px 0 75px;
+      }
+
+      .video-box {
+        border-radius: 18px;
+        aspect-ratio: 16 / 9;
+      }
+
+      .video-label {
+        top: 10px;
+        left: 10px;
+        font-size: 9px;
+      }
+
+      .community {
+        min-height: 480px;
+        padding: 80px 0;
+      }
+
+      .community h2 {
+        font-size: clamp(43px, 14vw, 65px);
+      }
+
+      .community p {
+        font-size: 14px;
+      }
+
+      .social-card {
+        padding: 23px;
+      }
+
+      .faq summary {
+        font-size: 16px;
+        line-height: 1.35;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+
+      .modal-content {
+        padding: 22px 17px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      dialog {
+        width: calc(100% - 18px);
+        max-height: calc(100svh - 18px);
+        border-radius: 20px;
+      }
+    }
+
+    /* =========================
+       VERY SMALL PHONES
+    ========================== */
+
+    @media (max-width: 380px) {
+      .container {
+        width: calc(100% - 22px);
+      }
+
+      .hero h1 {
+        font-size: 57px;
+      }
+
+      .hero h2 {
+        font-size: 25px;
+      }
+
+      .section-title {
+        font-size: 34px;
+      }
+
+      .product-info h3 {
+        font-size: 38px;
+      }
+    }
+
+    /* Prevent long text / links from creating horizontal overflow */
+    h1,
+    h2,
+    h3,
+    p,
+    a,
+    span,
+    label {
+      overflow-wrap: break-word;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div id="prog" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-<!-- =========================
-     NAVEGACIÓN
-========================= -->
+  <!-- =========================
+       NAV
+  ========================== -->
 
-<nav id="nav">
-  <div class="w">
+  <nav>
+    <div class="nav-inner">
 
-    <a class="logo" href="#inicio" aria-label="NOVACOL inicio">
-      <i></i>NOVACOL
-    </a>
-
-    <button
-      class="burger"
-      id="burger"
-      aria-label="Abrir menú"
-      aria-expanded="false"
-      aria-controls="menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <div class="links" id="menu">
-      <a href="#sobre">NOVACOL</a>
-      <a href="#productos">Productos</a>
-      <a href="#video">Videos</a>
-      <a href="#comunidad">Comunidad</a>
-      <a href="#redes">Redes</a>
-
-      <a
-        class="pill"
-        href="https://instagram.com/novacol10_"
-        target="_blank"
-        rel="noopener">
-        @novacol10_
+      <a href="#inicio" class="logo" aria-label="NOVACOL inicio">
+        NOVACOL<span>10</span>
       </a>
-    </div>
-
-  </div>
-</nav>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<header class="w hero" id="inicio">
-
-  <div>
-
-    <span class="tag rv">
-      <span class="dot"></span>
-      ⚽ Comunidad de fútbol y microfútbol
-    </span>
-
-    <h1 class="rv" style="--d:.08s">
-      NOVACOL
-    </h1>
-
-    <h2 class="rv" style="--d:.16s">
-      La comunidad de fútbol hecha para los que juegan en
-      <span class="acc">cancha chica</span>.
-    </h2>
-
-    <p class="rv" style="--d:.24s">
-      Retos, jugadas, partidos, fútbol 1 vs 1 y contenido para quienes viven el fútbol dentro y fuera de la cancha.
-    </p>
-
-    <div class="btns rv" style="--d:.32s">
-
-      <a class="btn" href="#comunidad">
-        Conoce NOVACOL
-        <span class="ar">→</span>
-      </a>
-
-      <a
-        class="btn ghost"
-        href="https://instagram.com/novacol10_"
-        target="_blank"
-        rel="noopener">
-        Seguir en Instagram
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="photo rv" style="--d:.2s">
-
-    <img
-      src="img/foto.jpg"
-      alt="Sebastián Nova, creador de NOVACOL"
-      width="800"
-      height="1000"
-      loading="eager"
-      fetchpriority="high"
-      decoding="async">
-
-    <div class="chip">
-      <b>@novacol10_</b>
-      Creador de NOVACOL
-    </div>
-
-  </div>
-
-</header>
-
-
-<!-- =========================
-     SOBRE NOVACOL / SEBASTIÁN
-========================= -->
-
-<section id="sobre" class="band">
-
-  <div class="w about">
-
-    <div class="about-img rv">
-
-      <img
-        src="img/foto.jpg"
-        alt="Sebastián Nova - fundador de NOVACOL"
-        width="800"
-        height="800"
-        loading="lazy"
-        decoding="async">
-
-    </div>
-
-
-    <div class="about-copy rv" style="--d:.12s">
-
-      <span class="tag">
-        ⚽ CONOCE A NOVACOL
-      </span>
-
-      <h4>
-        Fútbol.<br>
-        Comunidad.<br>
-        <span class="acc">Pasión.</span>
-      </h4>
-
-      <p>
-        Soy Sebastián Nova, creador de NOVACOL y apasionado por el fútbol y el microfútbol.
-      </p>
-
-      <p>
-        NOVACOL nace de la cancha, de los partidos con amigos, de los retos, las jugadas y de esa pasión que hace que siempre queramos volver a jugar.
-      </p>
-
-      <p>
-        Este espacio está pensado para reunir a jugadores, creadores y amantes del fútbol alrededor de una misma comunidad.
-      </p>
-
-      <div class="quote">
-        "Piso de cemento y sueños en las nubes."
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PRODUCTO
-========================= -->
-
-<section id="productos" class="band alt">
-
-  <div class="w">
-
-    <span class="tag rv">
-      ● Producto NOVACOL
-    </span>
-
-    <h3 class="t rv" style="--d:.06s">
-      Lleva NOVACOL contigo.
-    </h3>
-
-    <p class="sub rv" style="--d:.12s">
-      La primera pieza de nuestra comunidad. Dentro y fuera de la cancha.
-    </p>
-
-
-    <article class="prod rv" style="--d:.18s">
-
-      <div class="pimg">
-
-        <span class="promo">
-          EN DESCUENTO
-        </span>
-
-        <img
-          src="img/gorra.jpg"
-          alt="Gorra negra oficial NOVACOL"
-          width="800"
-          height="800"
-          loading="lazy"
-          decoding="async">
-
-      </div>
-
-
-      <div class="pinfo">
-
-        <span class="brand">
-          NOVACOL
-        </span>
-
-        <h4>
-          Gorra negra NOVACOL
-        </h4>
-
-        <div>
-          <span class="now">
-            $50.000
-          </span>
-        </div>
-
-        <ul>
-
-          <li>
-            Diseño negro con identidad NOVACOL
-          </li>
-
-          <li>
-            Para entrenar, jugar y salir
-          </li>
-
-          <li>
-            Pedido directo desde la página
-          </li>
-
-        </ul>
-
-        <button
-          class="btn btn-cta"
-          data-producto="Gorra negra Novacol"
-          data-valor="50000">
-          Pedir ahora
-          <span class="ar">→</span>
-        </button>
-
-        <div class="perks">
-          <span>📦 Envíos coordinados</span>
-          <span>💬 Atención directa</span>
-        </div>
-
-        <p class="note">
-          Coordinamos pago y envío contigo después de recibir tu pedido.
-        </p>
-
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     VIDEO
-========================= -->
-
-<section id="video">
-
-  <div class="w">
-
-    <div class="vhead">
-
-      <div>
-
-        <h3 class="t rv">
-          Fútbol y jugadas.
-        </h3>
-
-        <p class="sub rv">
-          Mira parte del contenido que estamos construyendo alrededor de NOVACOL.
-        </p>
-
-      </div>
-
-      <a
-        class="vbtn rv"
-        href="https://www.youtube.com/@Novacol10"
-        target="_blank"
-        rel="noopener">
-        ▶ Ver más en YouTube
-      </a>
-
-    </div>
-
-
-    <div class="vframe rv" id="vframe">
 
       <button
-        class="vpre"
-        id="vpre"
+        class="menu-btn"
+        id="menuBtn"
         type="button"
-        aria-label="Reproducir video">
-        <span>▶</span>
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
-    </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#sobre">Sobre NOVACOL</a>
+        <a href="#productos">Productos</a>
+        <a href="#video">Video</a>
+        <a href="#comunidad">Comunidad</a>
+        <a href="#redes">Redes</a>
 
-  </div>
-
-</section>
-
-
-<!-- =========================
-     MARQUESINA
-========================= -->
-
-<div class="marq" aria-hidden="true">
-
-  <div>
-
-    <span>MICROFÚTBOL</span>
-    <span>★</span>
-    <span>FÚTBOL</span>
-    <span>★</span>
-    <span>1 VS 1</span>
-    <span>★</span>
-    <span>RETOS</span>
-    <span>★</span>
-    <span>NOVACOL</span>
-    <span>★</span>
-
-    <span>MICROFÚTBOL</span>
-    <span>★</span>
-    <span>FÚTBOL</span>
-    <span>★</span>
-    <span>1 VS 1</span>
-    <span>★</span>
-    <span>RETOS</span>
-    <span>★</span>
-    <span>NOVACOL</span>
-    <span>★</span>
-
-  </div>
-
-</div>
-
-
-<!-- =========================
-     COMUNIDAD
-========================= -->
-
-<section id="comunidad" class="band">
-
-  <div class="w micro">
-
-    <div class="rv">
-
-      <p class="big">
-        Cancha chica.<br>
-        <em>Toque rápido.</em><br>
-        Parche grande.
-      </p>
+        <a
+          href="https://www.instagram.com/novacol10_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="nav-instagram"
+        >
+          @novacol10_
+        </a>
+      </div>
 
     </div>
+  </nav>
 
 
-    <div class="list">
+  <main id="inicio">
 
-      <div class="box rv">
+    <!-- =========================
+         HERO
+    ========================== -->
 
-        <div class="ic">🔥</div>
+    <section class="hero">
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <div class="hero-copy reveal">
+
+            <div class="tag">
+              ⚽ Comunidad de microfútbol
+            </div>
+
+            <h1>NOVACOL</h1>
+
+            <div class="founder-line">
+              Creado por <strong>Sebastián Nova</strong>
+            </div>
+
+            <h2>
+              La comunidad de fútbol hecha para los que juegan en cancha chica.
+            </h2>
+
+            <p>
+              Partidos, retos, jugadas y parche. Si el toque rápido,
+              el túnel y el uno contra uno son lo tuyo, aquí encuentras
+              tu equipo.
+            </p>
+
+            <div class="hero-buttons">
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="openOrder"
+              >
+                Pedir mi gorra
+              </button>
+
+              <a
+                href="https://www.instagram.com/novacol10_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+              >
+                Seguir en Instagram
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="hero-photo reveal">
+
+            <div class="hero-photo-inner">
+
+              <img
+                src="img/foto.jpg"
+                alt="Sebastián Nova, creador de contenido deportivo y fundador de NOVACOL"
+                width="800"
+                height="1000"
+                fetchpriority="high"
+                decoding="async"
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         MARQUEE
+    ========================== -->
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+
+        <span class="marquee-item"><strong>NOVACOL</strong></span>
+        <span class="marquee-item">MICROFÚTBOL</span>
+        <span class="marquee-item">FUTSAL</span>
+        <span class="marquee-item">FÚTBOL</span>
+        <span class="marquee-item">1 VS 1</span>
+        <span class="marquee-item">COMUNIDAD</span>
+        <span class="marquee-item"><strong>NOVACOL</strong></span>
+        <span class="marquee-item">MICROFÚTBOL</span>
+        <span class="marquee-item">FUTSAL</span>
+        <span class="marquee-item">FÚTBOL</span>
+        <span class="marquee-item">1 VS 1</span>
+        <span class="marquee-item">COMUNIDAD</span>
+
+      </div>
+    </div>
+
+
+    <!-- =========================
+         SOBRE NOVACOL
+    ========================== -->
+
+    <section class="about" id="sobre">
+      <div class="container">
+
+        <div class="about-box reveal">
+
+          <span class="eyebrow">
+            Sebastián Nova · NOVACOL
+          </span>
+
+          <h2 class="section-title">
+            Una comunidad nacida en la cancha.
+          </h2>
+
+          <p>
+            Soy <strong>Sebastián Nova</strong>, creador de contenido deportivo
+            y fundador de <strong>NOVACOL</strong>. Comparto contenido de
+            microfútbol, fútbol sala, fútbol, retos uno contra uno,
+            jugadas y experiencias alrededor del deporte.
+            <br><br>
+            NOVACOL representa a quienes viven el fútbol desde la cancha,
+            desde el barrio y desde la pasión por competir, aprender y
+            disfrutar cada partido.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         PRODUCTOS
+    ========================== -->
+
+    <section class="section" id="productos">
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <span class="eyebrow">
+            NOVACOL SHOP
+          </span>
+
+          <h2 class="section-title">
+            Lleva la comunidad contigo.
+          </h2>
+
+          <p class="section-description">
+            Productos NOVACOL para los que llevan el fútbol y el microfútbol
+            también fuera de la cancha.
+          </p>
+
+        </div>
+
+
+        <div class="product-grid">
+
+          <div class="product-image-wrap reveal">
+
+            <div class="pimg">
+
+              <div class="tilt">
+
+                <img
+                  src="img/gorra.jpg"
+                  alt="Gorra NOVACOL"
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="product-info reveal">
+
+            <span class="eyebrow">
+              PRODUCTO NOVACOL
+            </span>
+
+            <h3>
+              Gorra<br />
+              NOVACOL
+            </h3>
+
+            <div class="price">
+              $50.000 COP
+            </div>
+
+            <p>
+              La gorra de la comunidad. Un producto pensado para representar
+              la esencia NOVACOL dentro y fuera de la cancha.
+            </p>
+
+            <div class="product-details">
+
+              <span class="pill">NOVACOL</span>
+              <span class="pill">Edición comunidad</span>
+              <span class="pill">Pedido online</span>
+
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="openOrder2"
+            >
+              Pedir mi gorra
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         VIDEO
+         AUTOPLAY + MUTE
+    ========================== -->
+
+    <section class="video-section" id="video">
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <span class="eyebrow">
+            CONTENIDO NOVACOL
+          </span>
+
+          <h2 class="section-title">
+            La cancha habla.
+          </h2>
+
+          <p class="section-description">
+            Retos, jugadas, fútbol y mucho parche. Esto es NOVACOL.
+          </p>
+
+        </div>
+
+
+        <div class="video-box reveal">
+
+          <div class="video-label">
+            NOVACOL · VIDEO
+          </div>
+
+          <iframe
+            src="https://www.youtube.com/embed/LFR0kula7ls?autoplay=1&mute=1&loop=1&playlist=LFR0kula7ls&controls=1&playsinline=1&rel=0&modestbranding=1"
+            title="Video de NOVACOL"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen
+            loading="eager"
+          ></iframe>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         COMUNIDAD
+    ========================== -->
+
+    <section class="community" id="comunidad">
+
+      <div class="container">
+
+        <div class="community-content reveal">
+
+          <span class="eyebrow">
+            LA COMUNIDAD
+          </span>
+
+          <h2>
+            Piso de cemento.<br />
+            Sueños en las nubes.
+          </h2>
+
+          <p>
+            NOVACOL nace de la pasión por el fútbol, el microfútbol y
+            el fútbol sala. Una comunidad para quienes disfrutan competir,
+            aprender jugadas, aceptar retos y vivir el deporte.
+          </p>
+
+          <a
+            href="https://www.instagram.com/novacol10_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            Entrar a la comunidad
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         REDES
+    ========================== -->
+
+    <section class="section" id="redes">
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <span class="eyebrow">
+            SIGUE A NOVACOL
+          </span>
+
+          <h2 class="section-title">
+            El parche también está online.
+          </h2>
+
+          <p class="section-description">
+            Encuentra nuevos retos, jugadas, partidos y contenido deportivo
+            en las redes de Sebastián Nova.
+          </p>
+
+        </div>
+
+
+        <div class="social-grid">
+
+          <a
+            class="social-card reveal"
+            href="https://www.instagram.com/novacol10_/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <small>Instagram</small>
+            <h3>@novacol10_</h3>
+            <p>Contenido, comunidad y momentos de NOVACOL.</p>
+            <span>Ver Instagram →</span>
+          </a>
+
+
+          <a
+            class="social-card reveal"
+            href="https://www.tiktok.com/@novacol10"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <small>TikTok</small>
+            <h3>@novacol10</h3>
+            <p>Retos, jugadas y videos de fútbol y microfútbol.</p>
+            <span>Ver TikTok →</span>
+          </a>
+
+
+          <a
+            class="social-card reveal"
+            href="https://www.youtube.com/@Novacol10"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <small>YouTube</small>
+            <h3>Novacol10</h3>
+            <p>Videos, Shorts, retos 1 vs 1 y contenido deportivo.</p>
+            <span>Ver YouTube →</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <span class="eyebrow">
+            NOVACOL
+          </span>
+
+          <h2 class="section-title">
+            Preguntas frecuentes.
+          </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+          <details class="reveal">
+            <summary>
+              ¿Qué es NOVACOL?
+            </summary>
+
+            <p>
+              NOVACOL es una comunidad alrededor del microfútbol, el fútbol
+              sala y el fútbol, creada por Sebastián Nova a través de
+              contenido, retos, jugadas y experiencias deportivas.
+            </p>
+          </details>
+
+
+          <details class="reveal">
+            <summary>
+              ¿Quién es Sebastián Nova?
+            </summary>
+
+            <p>
+              Sebastián Nova es creador de contenido deportivo y fundador
+              de NOVACOL. Su contenido está enfocado principalmente en
+              microfútbol, futsal, fútbol y retos uno contra uno.
+            </p>
+          </details>
+
+
+          <details class="reveal">
+            <summary>
+              ¿Dónde puedo comprar la gorra NOVACOL?
+            </summary>
+
+            <p>
+              Puedes solicitarla directamente desde esta página utilizando
+              el botón "Pedir mi gorra". Después de enviar tus datos,
+              se coordina contigo el proceso del pedido.
+            </p>
+          </details>
+
+
+          <details class="reveal">
+            <summary>
+              ¿Qué contenido publica NOVACOL?
+            </summary>
+
+            <p>
+              NOVACOL publica contenido relacionado con microfútbol,
+              fútbol sala, fútbol, retos 1 vs 1, jugadas, competencias
+              y experiencias de la comunidad.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-inner">
 
         <div>
-          <h4>Retos y jugadas</h4>
+          <div class="footer-logo">
+            NOVACOL
+          </div>
+
           <p>
-            Comparte tu mejor jugada y reta al parche.
+            Comunidad de microfútbol · Sebastián Nova
           </p>
         </div>
 
-      </div>
 
+        <div class="footer-links">
 
-      <div class="box rv" style="--d:.1s">
+          <a href="#inicio">Inicio</a>
+          <a href="#sobre">Sobre NOVACOL</a>
+          <a href="#productos">Productos</a>
+          <a href="#redes">Redes</a>
 
-        <div class="ic">⚽</div>
-
-        <div>
-          <h4>1 vs 1</h4>
-          <p>
-            Competencia, niveles y retos para encontrar al mejor.
-          </p>
-        </div>
-
-      </div>
-
-
-      <div class="box rv" style="--d:.2s">
-
-        <div class="ic">🏆</div>
-
-        <div>
-          <h4>Eventos NOVACOL</h4>
-          <p>
-            Campeonatos, encuentros y experiencias para la comunidad.
-          </p>
         </div>
 
       </div>
 
     </div>
 
-  </div>
-
-</section>
+  </footer>
 
 
-<!-- =========================
-     REDES
-========================= -->
+  <!-- =========================
+       MODAL PEDIDO
+  ========================== -->
 
-<section id="redes" class="band">
+  <dialog id="orderDialog">
 
-  <div class="w">
+    <div class="modal-content">
 
-    <h3 class="t rv">
-      Únete al parche.
-    </h3>
-
-    <p class="sub rv">
-      Síguenos en redes y acompaña todo lo que estamos construyendo en NOVACOL.
-    </p>
-
-
-    <div class="soc">
-
-      <a
-        class="box rv"
-        href="https://instagram.com/novacol10_"
-        target="_blank"
-        rel="noopener">
-
-        <span class="si">◎</span>
+      <div class="modal-top">
 
         <div>
-          <small>Instagram</small>
-          <b>@novacol10_</b>
+          <h2>Pide tu gorra.</h2>
+          <p>Completa tus datos y nos pondremos en contacto contigo.</p>
         </div>
-
-        <span class="arrow">↗</span>
-
-      </a>
-
-
-      <a
-        class="box rv"
-        style="--d:.1s"
-        href="https://tiktok.com/@novacol10"
-        target="_blank"
-        rel="noopener">
-
-        <span class="si">♪</span>
-
-        <div>
-          <small>TikTok</small>
-          <b>@novacol10</b>
-        </div>
-
-        <span class="arrow">↗</span>
-
-      </a>
-
-
-      <a
-        class="box rv"
-        style="--d:.2s"
-        href="https://www.youtube.com/@Novacol10"
-        target="_blank"
-        rel="noopener">
-
-        <span class="si">▶</span>
-
-        <div>
-          <small>YouTube</small>
-          <b>@Novacol10</b>
-        </div>
-
-        <span class="arrow">↗</span>
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-  © <span id="y"></span> NOVACOL · Comunidad de fútbol y microfútbol
-
-  ·
-
-  <a href="https://instagram.com/novacol10_" target="_blank" rel="noopener">
-    Instagram
-  </a>
-
-  ·
-
-  <a href="https://tiktok.com/@novacol10" target="_blank" rel="noopener">
-    TikTok
-  </a>
-
-  ·
-
-  <a href="https://www.youtube.com/@Novacol10" target="_blank" rel="noopener">
-    YouTube
-  </a>
-
-</footer>
-
-
-<button id="top" aria-label="Volver arriba">
-  ↑
-</button>
-
-
-<!-- =========================
-     TOAST
-========================= -->
-
-<div id="toast" role="status" aria-live="polite"></div>
-
-
-<!-- =========================
-     MODAL PEDIDO
-========================= -->
-
-<dialog id="modal" aria-labelledby="mTitle">
-
-  <div class="mhead">
-
-    <div>
-      <h5 id="mTitle">
-        Haz tu pedido
-      </h5>
-
-      <p id="resumen"></p>
-    </div>
-
-    <button
-      class="x"
-      type="button"
-      data-close
-      aria-label="Cerrar">
-      ✕
-    </button>
-
-  </div>
-
-
-  <form id="pedido" novalidate>
-
-    <div class="f">
-
-      <label for="f-nombre">
-        Nombre completo
-      </label>
-
-      <input
-        id="f-nombre"
-        name="nombre"
-        required
-        autocomplete="name"
-        placeholder="Ej: Juan Pérez"
-        minlength="5">
-
-    </div>
-
-
-    <div class="row">
-
-      <div class="f">
-
-        <label for="f-tel">
-          WhatsApp
-        </label>
-
-        <input
-          id="f-tel"
-          name="telefono"
-          type="tel"
-          required
-          autocomplete="tel"
-          inputmode="tel"
-          placeholder="300 123 4567">
-
-      </div>
-
-
-      <div class="f">
-
-        <label for="f-ciudad">
-          Ciudad
-        </label>
-
-        <input
-          id="f-ciudad"
-          name="ciudad"
-          required
-          autocomplete="address-level2"
-          placeholder="Bogotá">
-
-      </div>
-
-    </div>
-
-
-    <div class="f">
-
-      <label for="f-email">
-        Correo electrónico
-      </label>
-
-      <input
-        id="f-email"
-        name="email"
-        type="email"
-        required
-        autocomplete="email"
-        placeholder="tucorreo@ejemplo.com">
-
-    </div>
-
-
-    <div class="f">
-
-      <label for="f-dir">
-        Dirección de entrega
-      </label>
-
-      <input
-        id="f-dir"
-        name="direccion"
-        required
-        autocomplete="street-address"
-        placeholder="Calle, número, barrio"
-        minlength="5">
-
-    </div>
-
-
-    <div class="f">
-
-      <label for="f-cant">
-        Cantidad
-      </label>
-
-      <div class="qty">
 
         <button
           type="button"
-          data-step="-1"
-          aria-label="Quitar uno">
-          −
-        </button>
-
-        <input
-          id="f-cant"
-          name="cantidad"
-          type="number"
-          min="1"
-          max="20"
-          value="1"
-          required>
-
-        <button
-          type="button"
-          data-step="1"
-          aria-label="Agregar uno">
-          +
+          class="close-modal"
+          id="closeOrder"
+          aria-label="Cerrar"
+        >
+          ×
         </button>
 
       </div>
 
+
+      <form
+        id="orderForm"
+        action="https://formsubmit.co/jhons.nova@gmail.com"
+        method="POST"
+      >
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Nuevo pedido - Gorra NOVACOL"
+        />
+
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false"
+        />
+
+        <input
+          type="hidden"
+          name="_template"
+          value="table"
+        />
+
+        <div class="form-grid">
+
+          <div class="field">
+
+            <label for="name">
+              Nombre completo
+            </label>
+
+            <input
+              id="name"
+              name="Nombre"
+              type="text"
+              autocomplete="name"
+              required
+            />
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="phone">
+              Teléfono
+            </label>
+
+            <input
+              id="phone"
+              name="Teléfono"
+              type="tel"
+              autocomplete="tel"
+              required
+            />
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="city">
+              Ciudad
+            </label>
+
+            <input
+              id="city"
+              name="Ciudad"
+              type="text"
+              autocomplete="address-level2"
+              required
+            />
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="email">
+              Correo electrónico
+            </label>
+
+            <input
+              id="email"
+              name="Correo"
+              type="email"
+              autocomplete="email"
+              required
+            />
+
+          </div>
+
+
+          <div class="field full">
+
+            <label for="address">
+              Dirección
+            </label>
+
+            <input
+              id="address"
+              name="Dirección"
+              type="text"
+              autocomplete="street-address"
+              required
+            />
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="quantity">
+              Cantidad
+            </label>
+
+            <select
+              id="quantity"
+              name="Cantidad"
+              required
+            >
+              <option value="1">1 gorra</option>
+              <option value="2">2 gorras</option>
+              <option value="3">3 gorras</option>
+              <option value="4">4 gorras</option>
+              <option value="5">5 gorras</option>
+            </select>
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="message">
+              Mensaje
+            </label>
+
+            <input
+              id="message"
+              name="Mensaje"
+              type="text"
+              placeholder="Talla / color / comentario"
+            />
+
+          </div>
+
+        </div>
+
+
+        <div class="consent">
+
+          <input
+            id="consent"
+            type="checkbox"
+            name="Autorización"
+            value="Aceptada"
+            required
+          />
+
+          <label for="consent">
+            Autorizo el tratamiento de mis datos personales para gestionar
+            mi solicitud y pedido de la gorra NOVACOL.
+          </label>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="form-submit"
+        >
+          Enviar pedido
+        </button>
+
+      </form>
+
     </div>
 
-
-    <div class="total">
-
-      <span>Total a pagar</span>
-
-      <span id="total"></span>
-
-    </div>
+  </dialog>
 
 
-    <p
-      class="msg"
-      id="msg"
-      role="alert">
-    </p>
+  <script>
+    /* =========================
+       MENU MOBILE
+    ========================== */
 
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
 
-    <button
-      class="btn"
-      id="enviar"
-      type="submit">
-      Enviar pedido
-    </button>
+    if (menuBtn && navLinks) {
 
-  </form>
+      menuBtn.addEventListener("click", () => {
 
+        const isOpen = navLinks.classList.toggle("open");
 
-  <div class="done">
+        menuBtn.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
 
-    <h5>
-      ¡Pedido enviado!
-    </h5>
+      });
 
-    <p>
-      Te contactaremos pronto para coordinar el pago y la entrega.
-    </p>
+      navLinks.querySelectorAll("a").forEach(link => {
 
-    <button
-      class="btn"
-      type="button"
-      data-close>
-      Listo
-    </button>
+        link.addEventListener("click", () => {
 
-  </div>
+          navLinks.classList.remove("open");
 
-</dialog>
-
-
-<script>
-
-/* =====================================
-   CONFIGURACIÓN
-===================================== */
-
-const EMAIL="jhons.nova@gmail.com";
-const VIDEO_ID="LFR0kula7ls";
-
-const $=(s,c=document)=>c.querySelector(s);
-const $$=(s,c=document)=>[...c.querySelectorAll(s)];
-
-const reduce=matchMedia(
-  '(prefers-reduced-motion: reduce)'
-).matches;
-
-const cop=n=>'$'+n.toLocaleString('es-CO')+' COP';
-
-$('#y').textContent=new Date().getFullYear();
-
-
-/* =====================================
-   MENÚ
-===================================== */
-
-const nav=$('#nav');
-const burger=$('#burger');
-
-function setMenu(open){
-
-  nav.classList.toggle('open',open);
-
-  burger.setAttribute(
-    'aria-expanded',
-    String(open)
-  );
-
-  burger.setAttribute(
-    'aria-label',
-    open ? 'Cerrar menú' : 'Abrir menú'
-  );
-
-}
-
-burger.addEventListener(
-  'click',
-  ()=>setMenu(!nav.classList.contains('open'))
-);
-
-$$('#menu a').forEach(a=>{
-  a.addEventListener(
-    'click',
-    ()=>setMenu(false)
-  );
-});
-
-
-/* =====================================
-   SCROLL
-===================================== */
-
-const prog=$('#prog');
-const topBtn=$('#top');
-
-function onScroll(){
-
-  const y=scrollY;
-
-  const max=
-    document.documentElement.scrollHeight-innerHeight;
-
-  prog.style.transform=
-    `scaleX(${max>0?y/max:0})`;
-
-  nav.classList.toggle(
-    'scrolled',
-    y>10
-  );
-
-  topBtn.classList.toggle(
-    'show',
-    y>innerHeight*.8
-  );
-
-}
-
-addEventListener(
-  'scroll',
-  onScroll,
-  {passive:true}
-);
-
-onScroll();
-
-topBtn.addEventListener(
-  'click',
-  ()=>{
-    scrollTo({
-      top:0,
-      behavior:reduce?'auto':'smooth'
-    });
-  }
-);
-
-
-/* =====================================
-   ANIMACIONES
-===================================== */
-
-const rvObs=new IntersectionObserver(
-  entries=>{
-    entries.forEach(entry=>{
-
-      if(entry.isIntersecting){
-
-        entry.target.classList.add('in');
-
-        rvObs.unobserve(entry.target);
-
-      }
-
-    });
-  },
-  {
-    threshold:.12,
-    rootMargin:'0px 0px -40px 0px'
-  }
-);
-
-$$('.rv').forEach(
-  el=>rvObs.observe(el)
-);
-
-
-/* =====================================
-   ENLACES ACTIVOS
-===================================== */
-
-const navLinks=$$('#menu a[href^="#"]');
-
-const secObs=new IntersectionObserver(
-  entries=>{
-    entries.forEach(entry=>{
-
-      if(entry.isIntersecting){
-
-        navLinks.forEach(a=>{
-
-          a.classList.toggle(
-            'on',
-            a.getAttribute('href')===
-            '#'+entry.target.id
+          menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
           );
 
         });
 
-      }
-
-    });
-  },
-  {
-    rootMargin:'-45% 0px -50% 0px'
-  }
-);
-
-$$('section[id]').forEach(
-  section=>secObs.observe(section)
-);
-
-
-/* =====================================
-   VIDEO
-===================================== */
-
-const vFrame=$('#vframe');
-
-let yt=null;
-
-function loadVideo(){
-
-  if(yt)return;
-
-  yt=document.createElement('iframe');
-
-  const origin=
-    location.protocol.startsWith('http')
-      ? '&origin='+encodeURIComponent(location.origin)
-      : '';
-
-  yt.src=
-    `https://www.youtube.com/embed/${VIDEO_ID}`+
-    `?autoplay=1`+
-    `&mute=1`+
-    `&controls=1`+
-    `&playsinline=1`+
-    `&rel=0`+
-    `&modestbranding=1`+
-    `&enablejsapi=1`+
-    origin;
-
-  yt.loading='lazy';
-
-  yt.referrerPolicy=
-    'strict-origin-when-cross-origin';
-
-  yt.allow=
-    'autoplay; encrypted-media; picture-in-picture; fullscreen';
-
-  yt.allowFullscreen=true;
-
-  yt.title=
-    'NOVACOL - fútbol y microfútbol';
-
-  vFrame.appendChild(yt);
-
-  vFrame.classList.add('on');
-
-}
-
-$('#vpre').addEventListener(
-  'click',
-  loadVideo
-);
-
-
-/* =====================================
-   MODAL
-===================================== */
-
-const modal=$('#modal');
-const form=$('#pedido');
-const msg=$('#msg');
-const btn=$('#enviar');
-const tot=$('#total');
-const qty=form.cantidad;
-
-let prod={};
-
-const rules={
-
-  nombre:v=>
-    v.trim().split(/\s+/).filter(Boolean).length>=2,
-
-  telefono:v=>{
-    const d=v.replace(/\D/g,'');
-    return d.length>=7 && d.length<=15;
-  },
-
-  email:v=>
-    /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
-
-  ciudad:v=>
-    v.trim().length>=2,
-
-  direccion:v=>
-    v.trim().length>=5,
-
-  cantidad:v=>
-    +v>=1 && +v<=20
-
-};
-
-
-function validateInput(input){
-
-  const valid=
-    rules[input.name]
-      ? rules[input.name](input.value)
-      : true;
-
-  input.setAttribute(
-    'aria-invalid',
-    String(!valid)
-  );
-
-  return valid;
-
-}
-
-
-function updateTotal(){
-
-  const n=Math.min(
-    20,
-    Math.max(
-      1,
-      parseInt(qty.value)||1
-    )
-  );
-
-  qty.value=n;
-
-  tot.textContent=
-    cop(prod.valor*n);
-
-}
-
-
-$$('input',form).forEach(input=>{
-
-  input.addEventListener(
-    'blur',
-    ()=>validateInput(input)
-  );
-
-});
-
-
-$$('[data-step]',form).forEach(button=>{
-
-  button.addEventListener(
-    'click',
-    ()=>{
-
-      const step=
-        Number(button.dataset.step);
-
-      const current=
-        parseInt(qty.value)||1;
-
-      qty.value=
-        Math.min(
-          20,
-          Math.max(
-            1,
-            current+step
-          )
-        );
-
-      updateTotal();
+      });
 
     }
-  );
-
-});
 
 
-qty.addEventListener(
-  'input',
-  updateTotal
-);
+    /* =========================
+       SCROLL PROGRESS
+    ========================== */
 
+    const scrollProgress =
+      document.getElementById("scrollProgress");
 
-/* =====================================
-   ABRIR PEDIDO
-===================================== */
+    function updateScrollProgress() {
 
-function openOrder(button){
+      const scrollTop =
+        window.scrollY || document.documentElement.scrollTop;
 
-  prod={
-    nombre:button.dataset.producto,
-    valor:Number(button.dataset.valor)
-  };
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
 
-  $('#mTitle').textContent=
-    prod.nombre;
+      const percentage =
+        height > 0 ? (scrollTop / height) * 100 : 0;
 
-  $('#resumen').textContent=
-    cop(prod.valor)+' c/u';
-
-  msg.textContent='';
-  msg.className='msg';
-
-  form.reset();
-
-  qty.value=1;
-
-  updateTotal();
-
-  modal.showModal();
-
-  document.body.classList.add(
-    'modal-open'
-  );
-
-}
-
-$$('[data-producto]').forEach(
-  button=>{
-    button.addEventListener(
-      'click',
-      ()=>openOrder(button)
-    );
-  }
-);
-
-
-/* =====================================
-   CERRAR MODAL
-   CORREGIDO: eliminado "lb"
-===================================== */
-
-$$('[data-close]',modal).forEach(
-  button=>{
-    button.addEventListener(
-      'click',
-      ()=>{
-        modal.close();
-        document.body.classList.remove(
-          'modal-open'
-        );
-      }
-    );
-  }
-);
-
-modal.addEventListener(
-  'close',
-  ()=>{
-    document.body.classList.remove(
-      'modal-open'
-    );
-  }
-);
-
-
-/* =====================================
-   PEDIDO
-===================================== */
-
-form.addEventListener(
-  'submit',
-  async event=>{
-
-    event.preventDefault();
-
-    const inputs=
-      $$('input',form);
-
-    const invalid=
-      inputs.filter(
-        input=>!validateInput(input)
-      );
-
-    if(invalid.length){
-
-      invalid[0].focus();
-
-      msg.className='msg err';
-
-      msg.textContent=
-        'Revisa los datos del pedido.';
-
-      return;
-
+      scrollProgress.style.width =
+        percentage + "%";
     }
 
-    const clean=value=>
-      value.trim().replace(/\s+/g,' ');
+    window.addEventListener(
+      "scroll",
+      updateScrollProgress,
+      { passive: true }
+    );
 
-    const quantity=
-      Math.min(
-        20,
-        Math.max(
-          1,
-          Number(qty.value)||1
-        )
-      );
+    updateScrollProgress();
 
-    const data={
 
-      'Producto':prod.nombre,
+    /* =========================
+       REVEAL ANIMATIONS
+    ========================== */
 
-      'Cantidad':quantity,
+    const revealElements =
+      document.querySelectorAll(".reveal");
 
-      'Precio unitario':
-        cop(prod.valor),
+    if ("IntersectionObserver" in window) {
 
-      'Total a pagar':
-        cop(prod.valor*quantity),
+      const observer =
+        new IntersectionObserver(
+          entries => {
 
-      'Nombre':
-        clean(form.nombre.value),
+            entries.forEach(entry => {
 
-      'Teléfono / WhatsApp':
-        clean(form.telefono.value),
+              if (entry.isIntersecting) {
 
-      'Correo':
-        clean(form.email.value),
+                entry.target.classList.add("visible");
 
-      'Ciudad':
-        clean(form.ciudad.value),
+                observer.unobserve(entry.target);
 
-      'Dirección':
-        clean(form.direccion.value),
+              }
 
-      'Fecha':
-        new Date().toLocaleString(
-          'es-CO',
+            });
+
+          },
           {
-            dateStyle:'full',
-            timeStyle:'short'
-          }
-        ),
-
-      '_subject':
-        `Nuevo pedido NOVACOL - ${prod.nombre}`,
-
-      '_replyto':
-        clean(form.email.value),
-
-      '_template':
-        'table',
-
-      '_captcha':
-        'false'
-
-    };
-
-
-    btn.disabled=true;
-
-    btn.textContent=
-      'Enviando...';
-
-
-    try{
-
-      const response=
-        await fetch(
-          'https://formsubmit.co/ajax/'+EMAIL,
-          {
-            method:'POST',
-            headers:{
-              'Content-Type':
-                'application/json',
-              'Accept':
-                'application/json'
-            },
-            body:JSON.stringify(data)
+            threshold: .08
           }
         );
 
+      revealElements.forEach(element => {
+        observer.observe(element);
+      });
 
-      const result=
-        await response.json()
-        .catch(()=>({}));
+    } else {
 
-
-      if(
-        !response.ok ||
-        result.success===false ||
-        result.success==="false"
-      ){
-
-        throw new Error(
-          'No se pudo enviar el pedido.'
-        );
-
-      }
-
-
-      modal.classList.add(
-        'sent'
-      );
-
-      toast(
-        '¡Pedido enviado! ⚽'
-      );
-
-
-    }catch(error){
-
-      msg.className='msg err';
-
-      msg.textContent=
-        'No se pudo enviar. Inténtalo nuevamente.';
-
-      toast(
-        'No se pudo enviar el pedido',
-        true
-      );
-
-    }finally{
-
-      btn.disabled=false;
-
-      btn.textContent=
-        'Enviar pedido';
+      revealElements.forEach(element => {
+        element.classList.add("visible");
+      });
 
     }
 
-  }
-);
+
+    /* =========================
+       PRODUCT MODAL
+    ========================== */
+
+    const dialog =
+      document.getElementById("orderDialog");
+
+    const openOrder =
+      document.getElementById("openOrder");
+
+    const openOrder2 =
+      document.getElementById("openOrder2");
+
+    const closeOrder =
+      document.getElementById("closeOrder");
 
 
-/* =====================================
-   TOAST
-===================================== */
+    function openProductModal() {
 
-let toastTimer;
+      if (!dialog) return;
 
-function toast(text,error=false){
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
 
-  const element=
-    $('#toast');
+    }
 
-  element.textContent=text;
 
-  element.className=
-    error
-      ? 'show err'
-      : 'show';
+    function closeProductModal() {
 
-  clearTimeout(
-    toastTimer
-  );
+      if (!dialog) return;
 
-  toastTimer=
-    setTimeout(
-      ()=>element.classList.remove('show'),
-      3500
+      if (typeof dialog.close === "function") {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+      }
+
+    }
+
+
+    if (openOrder) {
+      openOrder.addEventListener(
+        "click",
+        openProductModal
+      );
+    }
+
+
+    if (openOrder2) {
+      openOrder2.addEventListener(
+        "click",
+        openProductModal
+      );
+    }
+
+
+    if (closeOrder) {
+      closeOrder.addEventListener(
+        "click",
+        closeProductModal
+      );
+    }
+
+
+    /*
+      CORRECCIÓN:
+      Antes había una referencia a "lb" que no existía.
+      Esto mantiene el mismo comportamiento:
+      hacer clic fuera de la ventana cierra el modal.
+    */
+
+    if (dialog) {
+
+      dialog.addEventListener("click", event => {
+
+        if (event.target === dialog) {
+          closeProductModal();
+        }
+
+      });
+
+    }
+
+
+    /* =========================
+       ESC PARA CERRAR
+    ========================== */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key === "Escape" &&
+          dialog &&
+          dialog.open
+        ) {
+          closeProductModal();
+        }
+
+      }
     );
 
-}
 
-</script>
+    /* =========================
+       FORMULARIO
+    ========================== */
+
+    const orderForm =
+      document.getElementById("orderForm");
+
+    if (orderForm) {
+
+      orderForm.addEventListener(
+        "submit",
+        () => {
+
+          const submitButton =
+            orderForm.querySelector(
+              ".form-submit"
+            );
+
+          if (submitButton) {
+
+            submitButton.disabled = true;
+
+            submitButton.textContent =
+              "Enviando pedido...";
+
+          }
+
+        }
+      );
+
+    }
+
+
+    /* =========================
+       EFECTO TILT DE LA GORRA
+    ========================== */
+
+    const productCard =
+      document.querySelector(".pimg");
+
+    const tilt =
+      document.querySelector(".tilt");
+
+    if (
+      productCard &&
+      tilt &&
+      window.matchMedia("(pointer:fine)").matches
+    ) {
+
+      productCard.addEventListener(
+        "mousemove",
+        event => {
+
+          const rect =
+            productCard.getBoundingClientRect();
+
+          const x =
+            event.clientX - rect.left;
+
+          const y =
+            event.clientY - rect.top;
+
+          const centerX =
+            rect.width / 2;
+
+          const centerY =
+            rect.height / 2;
+
+          const rotateY =
+            ((x - centerX) / centerX) * 4;
+
+          const rotateX =
+            ((centerY - y) / centerY) * 4;
+
+          tilt.style.transform =
+            `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotate(-3deg) scale(1.02)`;
+
+        }
+      );
+
+
+      productCard.addEventListener(
+        "mouseleave",
+        () => {
+
+          tilt.style.transform =
+            "rotate(-3deg)";
+
+        }
+      );
+
+    }
+
+
+    /* =========================
+       EVITAR DESBORDAMIENTO
+    ========================== */
+
+    function preventHorizontalOverflow() {
+
+      document.documentElement.style.overflowX =
+        "hidden";
+
+      document.body.style.overflowX =
+        "hidden";
+
+    }
+
+    preventHorizontalOverflow();
+
+
+    /* =========================
+       REAJUSTE AL CAMBIAR ORIENTACIÓN
+    ========================== */
+
+    window.addEventListener(
+      "orientationchange",
+      () => {
+
+        setTimeout(() => {
+          preventHorizontalOverflow();
+          updateScrollProgress();
+        }, 300);
+
+      }
+    );
+
+  </script>
 
 </body>
 </html>
