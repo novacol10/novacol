@@ -3,683 +3,2537 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Novacol | Comunidad de microfútbol</title>
-<meta name="description" content="Novacol, la comunidad de microfútbol. Pide tu gorra en promoción.">
+
+<!-- =========================
+     SEO PRINCIPAL
+========================= -->
+<title>NOVACOL | Comunidad de fútbol y microfútbol en Colombia</title>
+
+<meta name="description" content="NOVACOL es la comunidad de fútbol y microfútbol creada por Sebastián Nova. Retos 1 vs 1, jugadas, partidos, eventos y productos para quienes viven el fútbol.">
+
+<meta name="keywords" content="NOVACOL, Novacol10, Sebastián Nova, microfútbol, fútbol, fútbol Colombia, microfútbol Colombia, fútbol callejero, retos 1 vs 1, fútbol 1 vs 1">
+
+<meta name="author" content="Sebastián Nova - NOVACOL">
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<link rel="canonical" href="https://novacol10.com/">
+
 <meta name="theme-color" content="#000000">
+
+<!-- =========================
+     OPEN GRAPH
+========================= -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NOVACOL">
+<meta property="og:title" content="NOVACOL | Comunidad de fútbol y microfútbol">
+<meta property="og:description" content="La comunidad de fútbol creada por Sebastián Nova. Retos, jugadas, partidos, eventos y cultura futbolera.">
+<meta property="og:url" content="https://novacol10.com/">
+<meta property="og:locale" content="es_CO">
+<meta property="og:image" content="https://novacol10.com/img/foto.jpg">
+<meta property="og:image:alt" content="Sebastián Nova - NOVACOL">
+
+<!-- =========================
+     TWITTER / X
+========================= -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NOVACOL | Comunidad de fútbol y microfútbol">
+<meta name="twitter:description" content="Retos, fútbol, microfútbol y comunidad. Conoce NOVACOL.">
+<meta name="twitter:image" content="https://novacol10.com/img/foto.jpg">
+
+<!-- =========================
+     ICONO
+========================= -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚽%3C/text%3E%3C/svg%3E">
+
+<!-- =========================
+     FUENTES
+========================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- =========================
+     DATOS ESTRUCTURADOS
+========================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NOVACOL",
+  "alternateName": "NOVACOL10",
+  "url": "https://novacol10.com/",
+  "logo": "https://novacol10.com/img/foto.jpg",
+  "description": "Comunidad de fútbol y microfútbol creada por Sebastián Nova.",
+  "founder": {
+    "@type": "Person",
+    "name": "Sebastián Nova",
+    "alternateName": "Novacol10"
+  },
+  "sameAs": [
+    "https://instagram.com/novacol10_",
+    "https://tiktok.com/@novacol10",
+    "https://www.youtube.com/@Novacol10"
+  ]
+}
+</script>
+
 <style>
-/* Cambia --acc para cambiar el color de marca de toda la página */
-:root{--acc:#ffffff;--acc-ink:#0a0a0a;--text:#fff;--muted:#a1a1aa;--line:rgba(255,255,255,.14);--glass:rgba(255,255,255,.05);--ease:cubic-bezier(.2,.8,.2,1)}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-html:has(dialog[open]){overflow:hidden}
-body{font-family:Inter,system-ui,sans-serif;background:#000;color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
-background-image:radial-gradient(55% 35% at 85% 0%,rgba(255,255,255,.09),transparent 70%),radial-gradient(40% 25% at 0% 45%,rgba(255,255,255,.05),transparent 70%);background-repeat:no-repeat}
-a{color:inherit;text-decoration:none}
-img{max-width:100%}
-::selection{background:var(--acc);color:var(--acc-ink)}
-.w{max-width:1120px;margin:0 auto;padding:0 24px}
-.acc{color:var(--acc)}
+:root{
+  --acc:#ffffff;
+  --acc-ink:#0a0a0a;
+  --text:#ffffff;
+  --muted:#a1a1aa;
+  --line:rgba(255,255,255,.14);
+  --glass:rgba(255,255,255,.05);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
 
-/* Barra de progreso de scroll */
-#prog{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--acc);transform-origin:0 50%;transform:scaleX(0);z-index:60}
+*{
+  box-sizing:border-box;
+  margin:0;
+}
 
-/* Navegación */
-nav{position:sticky;top:0;z-index:40;background:rgba(0,0,0,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
-nav.scrolled{background:rgba(0,0,0,.82);border-color:var(--line)}
-nav .w{display:flex;justify-content:space-between;align-items:center;height:68px}
-.logo{font:700 20px 'Space Grotesk';letter-spacing:.04em;display:flex;align-items:center;gap:8px}
-.logo i{width:10px;height:10px;border-radius:50%;background:var(--acc);box-shadow:0 0 14px var(--acc);font-style:normal}
-.links{display:flex;gap:6px;align-items:center;font-size:14px;color:var(--muted)}
-.links a:not(.pill){padding:8px 12px;border-radius:999px;transition:color .2s,background .2s}
-.links a:not(.pill):hover{color:#fff;background:var(--glass)}
-.links a.on{color:#fff;background:rgba(255,255,255,.08)}
-.pill{border:1px solid var(--line);background:var(--glass);padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500;color:#fff;transition:background .2s,border-color .2s;margin-left:8px}
-.pill:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3)}
-.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--glass);cursor:pointer;position:relative}
-.burger span{position:absolute;left:12px;right:12px;height:2px;background:#fff;border-radius:2px;transition:transform .3s var(--ease),opacity .2s}
-.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
-nav.open .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
-nav.open .burger span:nth-child(2){opacity:0}
-nav.open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:76px;
+}
 
-/* Botones */
-.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;font:600 15px Inter;padding:14px 28px;border-radius:999px;background:var(--acc);color:var(--acc-ink);transition:transform .2s var(--ease),box-shadow .25s,background .2s;text-align:center;overflow:hidden}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(255,255,255,.3)}
-.btn:active{transform:translateY(0) scale(.98)}
-.btn[disabled]{opacity:.7;cursor:progress;transform:none;box-shadow:none}
-.btn.ghost{background:transparent;color:#fff;border:1px solid var(--line)}
-.btn.ghost:hover{border-color:rgba(255,255,255,.4);box-shadow:none;background:var(--glass)}
-.btn .ar{transition:transform .2s var(--ease)}
-.btn:hover .ar{transform:translateX(4px)}
-.spin{width:16px;height:16px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp .7s linear infinite}
-@keyframes sp{to{transform:rotate(360deg)}}
-a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+body{
+  font-family:Inter,system-ui,sans-serif;
+  background:#000;
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  background-image:
+    radial-gradient(55% 35% at 85% 0%,rgba(255,255,255,.09),transparent 70%),
+    radial-gradient(40% 25% at 0% 45%,rgba(255,255,255,.05),transparent 70%);
+}
 
-/* Hero */
-.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--glass);border-radius:999px;padding:6px 14px;font-size:13px;color:#d4d4d8;margin-bottom:22px}
-.tag .dot{width:7px;height:7px;border-radius:50%;background:var(--acc);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}70%{box-shadow:0 0 0 10px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
-.hero{padding:64px 0 88px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;position:relative}
-.hero>*{position:relative}
-.hero::before{content:"";position:absolute;right:-90px;top:-10px;width:560px;height:560px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='130' fill='none' stroke='white' stroke-opacity='.09' stroke-width='3'/%3E%3Ccircle cx='200' cy='200' r='6' fill='white' fill-opacity='.12'/%3E%3Cpath d='M0 200H400' stroke='white' stroke-opacity='.09' stroke-width='3'/%3E%3C/svg%3E") center/contain no-repeat;animation:spin 60s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.hero h1{font:700 clamp(58px,11.5vw,132px)/.92 'Space Grotesk';letter-spacing:-.045em;background:linear-gradient(180deg,#fff 40%,#9a9a9a);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero h2{font:500 clamp(20px,2.6vw,28px)/1.3 'Space Grotesk';color:#d4d4d8;margin:20px 0 14px}
-.hero p{max-width:48ch;color:var(--muted)}
-.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-.photo{aspect-ratio:4/5;border-radius:28px;border:1px solid var(--line);background:linear-gradient(160deg,#1c1c1c,#0a0a0a);overflow:hidden;position:relative;box-shadow:0 0 90px rgba(255,255,255,.12);transition:transform .4s var(--ease)}
-.photo img{width:100%;height:100%;object-fit:cover;display:block;position:relative;transition:transform .8s var(--ease)}
-.photo:hover img{transform:scale(1.04)}
-.ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:#666;font-size:14px}
-.chip{position:absolute;left:16px;bottom:16px;background:rgba(0,0,0,.65);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13px;z-index:2}
-.chip b{display:block;font:700 16px 'Space Grotesk'}
-.scroll-hint{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:24px;height:38px;border:2px solid var(--line);border-radius:14px}
-.scroll-hint::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--acc);animation:sh 1.8s infinite}
-@keyframes sh{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+body.modal-open{
+  overflow:hidden;
+}
 
-/* Sección de video */
-#video{padding:72px 0 96px}
-.vhead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
-.vhead .sub{margin-bottom:0}
-.vframe{position:relative;aspect-ratio:16/9;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#000 url(https://i.ytimg.com/vi/LFR0kula7ls/hqdefault.jpg) center/cover;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 90px rgba(255,255,255,.06)}
-.vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.vpre{position:absolute;inset:0;display:grid;place-items:center;border:0;cursor:pointer;background:rgba(0,0,0,.35);transition:background .25s}
-.vpre:hover{background:rgba(0,0,0,.15)}
-.vpre span{width:84px;height:84px;border-radius:50%;background:var(--acc);color:var(--acc-ink);display:grid;place-items:center;font-size:30px;padding-left:6px;box-shadow:0 10px 40px rgba(0,0,0,.5);transition:transform .25s var(--ease)}
-.vpre:hover span{transform:scale(1.08)}
-.vframe.on .vpre{display:none}
-.vctl{display:flex;gap:10px;flex-wrap:wrap}
-.vbtn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(0,0,0,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;font:500 13px Inter;padding:8px 14px;border-radius:999px;cursor:pointer;transition:background .2s,border-color .2s}
-.vbtn:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35)}
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
-/* Marquesina */
-.marq{border-block:1px solid var(--line);overflow:hidden;background:var(--acc);color:var(--acc-ink)}
-.marq div{display:flex;width:max-content;animation:m 28s linear infinite;font:700 22px 'Space Grotesk';letter-spacing:.04em;padding:14px 0}
-.marq:hover div{animation-play-state:paused}
-.marq span{padding:0 28px;white-space:nowrap}
-@keyframes m{to{transform:translateX(-50%)}}
+img{
+  max-width:100%;
+}
 
-/* Secciones */
-section{padding:96px 0}
-h3.t{font:700 clamp(32px,5vw,52px)/1.05 'Space Grotesk';letter-spacing:-.035em;margin-bottom:10px}
-.sub{color:var(--muted);max-width:56ch;margin-bottom:40px}
-.box{background:var(--glass);border:1px solid var(--line);border-radius:24px;padding:28px;transition:border-color .25s,transform .25s var(--ease),background .25s}
-.box:hover{border-color:rgba(255,255,255,.45);transform:translateY(-4px)}
-.box .ic{width:46px;height:46px;border-radius:14px;border:1px solid var(--line);display:grid;place-items:center;font-size:22px;margin-bottom:18px;background:rgba(255,255,255,.06);transition:transform .3s var(--ease)}
-.box:hover .ic{transform:rotate(-8deg) scale(1.08)}
-.box h4{font:600 20px 'Space Grotesk';margin-bottom:6px}
-.box p{color:var(--muted);font-size:15px}
-.band{background:#111;border-block:1px solid #262626}
-.band.alt{background:#1a1a1a;border-color:#2e2e2e}
-.band .box{background:rgba(0,0,0,.32);border-color:#333}
-#comunidad{background:linear-gradient(rgba(17,17,17,.84),rgba(17,17,17,.94)),url(img/cancha.jpg) center/cover,#111}
+::selection{
+  background:#fff;
+  color:#000;
+}
 
-/* Comunidad */
-.micro{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.big{font:700 clamp(38px,6vw,76px)/.98 'Space Grotesk';letter-spacing:-.045em}
-.big em{font-style:normal;color:transparent;-webkit-text-stroke:1.5px var(--acc)}
-.list{display:grid;gap:14px}
-.list .box{padding:20px 24px;display:flex;gap:16px;align-items:center}
-.list .ic{margin:0;flex:none}
+.w{
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 24px;
+}
 
-/* Producto */
-.prod{display:grid;grid-template-columns:1fr 1fr;border:1px solid #3a3a3a;border-radius:32px;overflow:hidden;background:linear-gradient(145deg,#1f1f1f,#121212);box-shadow:0 30px 80px rgba(0,0,0,.55)}
-.pimg{position:relative;min-height:440px;background:radial-gradient(circle at 50% 40%,#4a4a4a,#262626 70%,#1c1c1c);perspective:900px;overflow:hidden}
-.pimg .tilt{position:absolute;inset:0;transition:transform .4s var(--ease);transform-style:preserve-3d}
-.pimg svg{position:absolute;inset:8% 8%;width:84%;height:84%;animation:float 5s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-10px)}}
-.pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
-.promo{position:absolute;top:18px;left:18px;z-index:2;background:var(--acc);color:var(--acc-ink);font:700 14px 'Space Grotesk';padding:8px 14px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.4)}
-.pinfo{padding:44px;display:flex;flex-direction:column;gap:16px;justify-content:center;background:rgba(0,0,0,.18)}
-.pinfo h4{font:700 34px 'Space Grotesk';letter-spacing:-.03em;line-height:1.1}
-.pinfo ul{list-style:none;padding:0;display:grid;gap:10px;color:#d4d4d8;font-size:15px}
-.pinfo li{display:flex;gap:10px;align-items:center}
-.pinfo li::before{content:"✓";display:grid;place-items:center;flex:none;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.14);color:var(--acc);font-weight:700;font-size:12px}
-.pr{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-.now{font:700 44px 'Space Grotesk';letter-spacing:-.03em}
-.save{font-size:13px;font-weight:600;color:var(--acc);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:4px 12px}
-.note{font-size:13px;color:var(--muted)}
+.acc{
+  color:#fff;
+}
 
-/* ---- Sección de producto destacada ---- */
-@property --ang{syntax:'<angle>';initial-value:0deg;inherits:false}
-#productos{position:relative;overflow:hidden}
-#productos::before{content:"";position:absolute;inset:-20% -10% auto;height:70%;background:radial-gradient(50% 60% at 50% 0%,rgba(255,255,255,.10),transparent 70%);pointer-events:none}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 12px Inter;letter-spacing:.16em;text-transform:uppercase;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--glass);margin-bottom:16px}
-.live{width:8px;height:8px;border-radius:50%;background:var(--acc);animation:pulse 1.8s infinite}
-.prod{position:relative;isolation:isolate;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
-.prod::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--ang),transparent 0 62%,rgba(255,255,255,.95) 76%,transparent 88%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ang 6s linear infinite;z-index:4;pointer-events:none}
-.prod::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(520px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.09),transparent 45%);opacity:0;transition:opacity .4s;z-index:3;pointer-events:none}
-.prod:hover{transform:translateY(-6px);box-shadow:0 44px 110px rgba(0,0,0,.75),0 0 60px rgba(255,255,255,.06)}
-.prod:hover::after{opacity:1}
-@keyframes ang{to{--ang:360deg}}
-.pimg .halo{position:absolute;left:50%;top:48%;width:72%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.26),transparent 65%);filter:blur(8px);animation:breathe 4.5s ease-in-out infinite;pointer-events:none}
-@keyframes breathe{50%{transform:translate(-50%,-50%) scale(1.14);opacity:.65}}
-.pimg .spot{position:absolute;inset:0;background:radial-gradient(260px circle at var(--px,50%) var(--py,40%),rgba(255,255,255,.16),transparent 60%);pointer-events:none;z-index:1}
-.pimg.tap svg{animation:tap .55s var(--ease),float 5s ease-in-out .55s infinite}
-@keyframes tap{40%{transform:scale(1.08) rotate(-4deg)}70%{transform:scale(.97) rotate(2deg)}}
-.promo{overflow:hidden;transform:rotate(-3deg);font-size:15px;padding:9px 16px;letter-spacing:.04em}
-.promo::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(0,0,0,.28) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.2s ease-in-out infinite}
-@keyframes shine{0%{transform:translateX(-120%)}55%,100%{transform:translateX(160%)}}
-.pinfo .brand{font:700 12px 'Space Grotesk';letter-spacing:.3em;color:var(--muted)}
-.pinfo .now{font-size:56px;line-height:1;background:linear-gradient(180deg,#fff 30%,#a1a1aa);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
-.prod.in .pinfo li{animation:liIn .6s var(--ease) both;animation-delay:calc(.35s + var(--i,0) * .1s)}
-@keyframes liIn{from{opacity:0;transform:translateX(-12px)}}
-.btn-cta{width:100%;padding:18px 28px;font-size:16px;overflow:hidden;animation:ctaGlow 2.6s ease-in-out infinite}
-.btn-cta::before{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(0,0,0,.18),transparent);transform:skewX(-20deg);animation:sweep 3.4s ease-in-out infinite}
-@keyframes sweep{0%{left:-60%}60%,100%{left:130%}}
-@keyframes ctaGlow{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.35)}50%{box-shadow:0 0 0 12px rgba(255,255,255,0)}}
-.perks{display:flex;flex-wrap:wrap;gap:8px}
-.perks span{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#d4d4d8;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--glass)}
+/* PROGRESO */
 
-/* Redes */
-.soc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.soc a{display:flex;align-items:center;gap:16px;padding:26px}
-.soc a>div{flex:1;min-width:0}
-.soc b{font:700 22px 'Space Grotesk';display:block;letter-spacing:-.02em;overflow-wrap:anywhere}
-.soc small{color:var(--muted);font-size:14px}
-.si{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;flex:none;background:rgba(255,255,255,.08);border:1px solid var(--line);transition:background .3s,box-shadow .3s,transform .3s var(--ease)}
-.si svg{width:28px;height:28px}
-.soc a:hover .si{transform:scale(1.06) rotate(-4deg);border-color:transparent}
-.soc a.ig:hover .si{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
-.soc a.tt:hover .si{background:#000;box-shadow:-3px -2px 0 #25f4ee,3px 2px 0 #fe2c55}
-.soc a.yt:hover .si{background:#f00}
-.arrow{font-size:22px;flex:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .3s var(--ease),background .25s,color .25s}
-.soc a:hover .arrow{transform:rotate(45deg);background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+#prog{
+  position:fixed;
+  top:0;
+  left:0;
+  height:3px;
+  width:100%;
+  background:#fff;
+  transform-origin:0 50%;
+  transform:scaleX(0);
+  z-index:100;
+}
 
-footer{border-top:1px solid var(--line);color:var(--muted);text-align:center;padding:32px 24px 32px;font-size:14px}
-footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
-footer a:hover{color:var(--acc)}
+/* NAV */
 
-/* Botón volver arriba */
-#top{position:fixed;right:20px;bottom:20px;z-index:30;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(0,0,0,.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;font-size:20px;cursor:pointer;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s var(--ease),background .2s}
-#top.show{opacity:1;transform:none;pointer-events:auto}
-#top:hover{background:var(--acc);color:var(--acc-ink)}
+nav{
+  position:sticky;
+  top:0;
+  z-index:40;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;
+  transition:.3s;
+}
 
-/* Barra de compra móvil */
-.mbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:35;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;border-radius:20px;background:rgba(18,18,18,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.6);transform:translateY(140%);transition:transform .4s var(--ease)}
-.mbar.show{transform:none}
-.mbar small{display:block;color:var(--muted);font-size:12px;line-height:1.2}
-.mbar b{font:700 18px 'Space Grotesk'}
-.mbar .btn{padding:12px 20px}
+nav.scrolled{
+  background:rgba(0,0,0,.88);
+  border-color:var(--line);
+}
 
-/* Animaciones de entrada */
-.rv{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
-.rv.in{opacity:1;transform:none}
-.no-js .rv{opacity:1;transform:none}
+nav .w{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  height:68px;
+}
 
-/* Modal de pedido */
-dialog{background:#0c0c0e;color:#fff;border:1px solid var(--line);border-radius:24px;padding:0;max-width:460px;width:calc(100% - 32px);max-height:calc(100dvh - 32px);box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:auto}
-dialog[open]{animation:pop .35s var(--ease)}
-dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
-@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.97)}}
-.mhead{display:flex;gap:14px;align-items:center;padding:24px 28px 0}
-.mhead .thumb{width:56px;height:56px;border-radius:14px;background:radial-gradient(circle at 50% 40%,#4a4a4a,#1c1c1c);display:grid;place-items:center;font-size:26px;flex:none;border:1px solid var(--line)}
-.mhead h5{font:700 22px 'Space Grotesk';letter-spacing:-.02em;line-height:1.2}
-.mhead p{color:var(--muted);font-size:14px}
-.x{margin-left:auto;align-self:flex-start;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--glass);color:#fff;font-size:18px;cursor:pointer;flex:none;transition:background .2s}
-.x:hover{background:rgba(255,255,255,.14)}
-form{padding:20px 28px 28px;display:grid;gap:14px}
-.f{display:grid;gap:6px}
-.f label{font-size:13px;font-weight:500;color:#d4d4d8}
-input{font:16px Inter;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#000;color:#fff;width:100%;transition:border-color .2s,box-shadow .2s}
-input::placeholder{color:#55555c}
-input:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(255,255,255,.15);outline:none}
-.f.bad input{border-color:#ff6b7a;box-shadow:0 0 0 3px rgba(255,107,122,.12)}
-.f.good input{border-color:rgba(74,222,128,.55)}
-.f .e{font-size:12px;color:#ff6b7a;min-height:0;max-height:0;overflow:hidden;transition:max-height .25s}
-.f.bad .e{max-height:40px}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#000}
-.qty button{width:44px;height:46px;border:0;background:transparent;color:#fff;font-size:20px;cursor:pointer;transition:background .2s}
-.qty button:hover:not(:disabled){background:rgba(255,255,255,.08)}
-.qty button:disabled{opacity:.3;cursor:not-allowed}
-.qty input{border:0;border-radius:0;text-align:center;padding:12px 0;-moz-appearance:textfield;appearance:textfield}
-.qty input:focus{box-shadow:none}
-.qty input::-webkit-outer-spin-button,.qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
-.total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:14px}
-.total span:first-child{color:var(--muted);font-size:14px}
-#total{font:700 24px 'Space Grotesk';display:inline-block}
-#total.bump{animation:bump .3s var(--ease)}
-@keyframes bump{50%{transform:scale(1.12);color:var(--acc)}}
-.msg{font-size:14px;min-height:20px}.msg.err{color:#ff6b7a}
-.done{padding:40px 28px;text-align:center;display:none;gap:14px;justify-items:center}
-dialog.sent form,dialog.sent .mhead{display:none}
-dialog.sent .done{display:grid}
-.done svg{width:76px;height:76px}
-.done circle{stroke-dasharray:226;stroke-dashoffset:226;animation:draw .6s var(--ease) forwards}
-.done path{stroke-dasharray:60;stroke-dashoffset:60;animation:draw .4s .45s var(--ease) forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-.done h5{font:700 26px 'Space Grotesk'}
-.done p{color:var(--muted);max-width:32ch}
+.logo{
+  font:700 20px 'Space Grotesk';
+  letter-spacing:.04em;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
 
-/* Toast */
-#toast{position:fixed;left:50%;bottom:24px;z-index:70;transform:translate(-50%,150%);background:#fff;color:#000;padding:12px 20px;border-radius:999px;font-weight:600;font-size:14px;box-shadow:0 14px 40px rgba(0,0,0,.5);transition:transform .4s var(--ease);max-width:calc(100% - 32px);text-align:center}
-#toast.show{transform:translate(-50%,0)}
-#toast.err{background:#ff6b7a}
+.logo i{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 14px #fff;
+}
 
-/* Visor de galería */
+.links{
+  display:flex;
+  gap:6px;
+  align-items:center;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.links a:not(.pill){
+  padding:8px 12px;
+  border-radius:999px;
+  transition:.2s;
+}
+
+.links a:not(.pill):hover{
+  color:#fff;
+  background:var(--glass);
+}
+
+.links a.on{
+  color:#fff;
+  background:rgba(255,255,255,.08);
+}
+
+.pill{
+  border:1px solid var(--line);
+  background:var(--glass);
+  padding:8px 16px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:500;
+  color:#fff;
+  margin-left:8px;
+}
+
+.pill:hover{
+  background:rgba(255,255,255,.14);
+}
+
+.burger{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:var(--glass);
+  cursor:pointer;
+  position:relative;
+}
+
+.burger span{
+  position:absolute;
+  left:12px;
+  right:12px;
+  height:2px;
+  background:#fff;
+  border-radius:2px;
+  transition:.3s;
+}
+
+.burger span:nth-child(1){top:15px}
+.burger span:nth-child(2){top:21px}
+.burger span:nth-child(3){top:27px}
+
+nav.open .burger span:nth-child(1){
+  transform:translateY(6px) rotate(45deg);
+}
+
+nav.open .burger span:nth-child(2){
+  opacity:0;
+}
+
+nav.open .burger span:nth-child(3){
+  transform:translateY(-6px) rotate(-45deg);
+}
+
+/* BOTONES */
+
+.btn{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  border:0;
+  cursor:pointer;
+  font:600 15px Inter;
+  padding:14px 28px;
+  border-radius:999px;
+  background:#fff;
+  color:#000;
+  transition:.25s;
+  text-align:center;
+  overflow:hidden;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 34px rgba(255,255,255,.3);
+}
+
+.btn.ghost{
+  background:transparent;
+  color:#fff;
+  border:1px solid var(--line);
+}
+
+.btn.ghost:hover{
+  background:var(--glass);
+  box-shadow:none;
+}
+
+.btn .ar{
+  transition:.2s;
+}
+
+.btn:hover .ar{
+  transform:translateX(4px);
+}
+
+/* HERO */
+
+.hero{
+  padding:64px 0 88px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:56px;
+  align-items:center;
+  position:relative;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  right:-90px;
+  top:-10px;
+  width:560px;
+  height:560px;
+  background:
+    radial-gradient(circle,transparent 36%,rgba(255,255,255,.08) 37%,transparent 38%);
+  opacity:.8;
+  pointer-events:none;
+}
+
+.hero h1{
+  font:700 clamp(58px,11.5vw,132px)/.92 'Space Grotesk';
+  letter-spacing:-.045em;
+  background:linear-gradient(180deg,#fff 40%,#9a9a9a);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.hero h2{
+  font:500 clamp(20px,2.6vw,28px)/1.3 'Space Grotesk';
+  color:#d4d4d8;
+  margin:20px 0 14px;
+}
+
+.hero p{
+  max-width:50ch;
+  color:var(--muted);
+}
+
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid var(--line);
+  background:var(--glass);
+  border-radius:999px;
+  padding:6px 14px;
+  font-size:13px;
+  color:#d4d4d8;
+  margin-bottom:22px;
+}
+
+.tag .dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 12px #fff;
+}
+
+.btns{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:32px;
+}
+
+.photo{
+  aspect-ratio:4/5;
+  border-radius:28px;
+  border:1px solid var(--line);
+  background:linear-gradient(160deg,#1c1c1c,#0a0a0a);
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 0 90px rgba(255,255,255,.12);
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.chip{
+  position:absolute;
+  left:16px;
+  bottom:16px;
+  background:rgba(0,0,0,.7);
+  backdrop-filter:blur(10px);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:10px 14px;
+  font-size:13px;
+}
+
+.chip b{
+  display:block;
+  font:700 16px 'Space Grotesk';
+}
+
+/* SECCIONES */
+
+section{
+  padding:96px 0;
+}
+
+h3.t{
+  font:700 clamp(32px,5vw,52px)/1.05 'Space Grotesk';
+  letter-spacing:-.035em;
+  margin-bottom:10px;
+}
+
+.sub{
+  color:var(--muted);
+  max-width:56ch;
+  margin-bottom:40px;
+}
+
+.band{
+  background:#111;
+  border-block:1px solid #262626;
+}
+
+.band.alt{
+  background:#1a1a1a;
+}
+
+.box{
+  background:var(--glass);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:28px;
+  transition:.25s;
+}
+
+.box:hover{
+  border-color:rgba(255,255,255,.4);
+  transform:translateY(-4px);
+}
+
+/* FUNDADOR */
+
+.about{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:56px;
+  align-items:center;
+}
+
+.about-img{
+  aspect-ratio:1;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#111;
+}
+
+.about-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.about-copy h4{
+  font:700 clamp(32px,5vw,58px)/1 'Space Grotesk';
+  letter-spacing:-.04em;
+  margin-bottom:18px;
+}
+
+.about-copy p{
+  color:var(--muted);
+  max-width:60ch;
+  margin-bottom:16px;
+}
+
+.quote{
+  margin-top:26px;
+  padding:20px 24px;
+  border-left:3px solid #fff;
+  background:rgba(255,255,255,.04);
+  color:#fff;
+  font:600 18px 'Space Grotesk';
+}
+
+/* VIDEO */
+
+#video{
+  padding:72px 0 96px;
+}
+
+.vhead{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+
+.vframe{
+  position:relative;
+  aspect-ratio:16/9;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#000 url(https://i.ytimg.com/vi/LFR0kula7ls/hqdefault.jpg) center/cover;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
+}
+
+.vframe iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.vpre{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  border:0;
+  cursor:pointer;
+  background:rgba(0,0,0,.35);
+}
+
+.vpre span{
+  width:84px;
+  height:84px;
+  border-radius:50%;
+  background:#fff;
+  color:#000;
+  display:grid;
+  place-items:center;
+  font-size:30px;
+}
+
+.vframe.on .vpre{
+  display:none;
+}
+
+.vbtn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.45);
+  color:#fff;
+  font:500 13px Inter;
+  padding:8px 14px;
+  border-radius:999px;
+}
+
+/* MARQUESINA */
+
+.marq{
+  border-block:1px solid var(--line);
+  overflow:hidden;
+  background:#fff;
+  color:#000;
+}
+
+.marq div{
+  display:flex;
+  width:max-content;
+  animation:m 28s linear infinite;
+  font:700 22px 'Space Grotesk';
+  letter-spacing:.04em;
+  padding:14px 0;
+}
+
+.marq span{
+  padding:0 28px;
+  white-space:nowrap;
+}
+
+@keyframes m{
+  to{transform:translateX(-50%)}
+}
+
+/* COMUNIDAD */
+
+.micro{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+}
+
+.big{
+  font:700 clamp(38px,6vw,76px)/.98 'Space Grotesk';
+  letter-spacing:-.045em;
+}
+
+.big em{
+  font-style:normal;
+  color:transparent;
+  -webkit-text-stroke:1.5px #fff;
+}
+
+.list{
+  display:grid;
+  gap:14px;
+}
+
+.list .box{
+  padding:20px 24px;
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+
+.list .ic{
+  width:46px;
+  height:46px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  display:grid;
+  place-items:center;
+  flex:none;
+  background:rgba(255,255,255,.06);
+  font-size:22px;
+}
+
+.list h4{
+  font:600 20px 'Space Grotesk';
+  margin-bottom:6px;
+}
+
+.list p{
+  color:var(--muted);
+  font-size:15px;
+}
+
+/* PRODUCTO */
+
+.prod{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border:1px solid #3a3a3a;
+  border-radius:32px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#1f1f1f,#121212);
+  box-shadow:0 30px 80px rgba(0,0,0,.55);
+}
+
+.pimg{
+  position:relative;
+  min-height:440px;
+  background:radial-gradient(circle at 50% 40%,#4a4a4a,#262626 70%,#1c1c1c);
+  overflow:hidden;
+}
+
+.pimg img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+.promo{
+  position:absolute;
+  top:18px;
+  left:18px;
+  z-index:2;
+  background:#fff;
+  color:#000;
+  font:700 14px 'Space Grotesk';
+  padding:9px 16px;
+  border-radius:999px;
+}
+
+.pinfo{
+  padding:44px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  justify-content:center;
+}
+
+.pinfo .brand{
+  font:700 12px 'Space Grotesk';
+  letter-spacing:.3em;
+  color:var(--muted);
+}
+
+.pinfo h4{
+  font:700 34px 'Space Grotesk';
+  line-height:1.1;
+}
+
+.pinfo .now{
+  font:700 52px 'Space Grotesk';
+}
+
+.pinfo ul{
+  list-style:none;
+  padding:0;
+  display:grid;
+  gap:10px;
+  color:#d4d4d8;
+  font-size:15px;
+}
+
+.pinfo li::before{
+  content:"✓";
+  margin-right:10px;
+  font-weight:700;
+}
+
+.btn-cta{
+  width:100%;
+  padding:18px 28px;
+  font-size:16px;
+}
+
+.perks{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.perks span{
+  font-size:12.5px;
+  color:#d4d4d8;
+  padding:6px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--glass);
+}
+
+.note{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* REDES */
+
+.soc{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.soc a{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:26px;
+}
+
+.soc a>div{
+  flex:1;
+}
+
+.soc b{
+  font:700 22px 'Space Grotesk';
+  display:block;
+}
+
+.soc small{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.si{
+  width:56px;
+  height:56px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  flex:none;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--line);
+}
+
+.si svg{
+  width:28px;
+  height:28px;
+}
+
+.arrow{
+  font-size:22px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  display:grid;
+  place-items:center;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  text-align:center;
+  padding:32px 24px;
+  font-size:14px;
+}
+
+footer a{
+  color:#fff;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+/* TOP */
+
+#top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:30;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.75);
+  color:#fff;
+  font-size:20px;
+  cursor:pointer;
+  opacity:0;
+  transform:translateY(16px);
+  pointer-events:none;
+  transition:.3s;
+}
+
+#top.show{
+  opacity:1;
+  transform:none;
+  pointer-events:auto;
+}
+
+#top:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* ANIMACIONES */
+
+.rv{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .8s var(--ease),transform .8s var(--ease);
+  transition-delay:var(--d,0s);
+}
+
+.rv.in{
+  opacity:1;
+  transform:none;
+}
+
+/* MODAL */
+
+dialog{
+  background:#0c0c0e;
+  color:#fff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:0;
+  max-width:460px;
+  width:calc(100% - 32px);
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
+}
+
+dialog::backdrop{
+  background:rgba(0,0,0,.78);
+  backdrop-filter:blur(4px);
+}
+
+.mhead{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  padding:24px 28px 0;
+}
+
+.mhead h5{
+  font:700 22px 'Space Grotesk';
+}
+
+.mhead p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.x{
+  margin-left:auto;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:var(--glass);
+  color:#fff;
+  cursor:pointer;
+}
+
+form{
+  padding:20px 28px 28px;
+  display:grid;
+  gap:14px;
+}
+
+.f{
+  display:grid;
+  gap:6px;
+}
+
+.f label{
+  font-size:13px;
+  color:#d4d4d8;
+}
+
+input{
+  font:16px Inter;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#000;
+  color:#fff;
+  width:100%;
+}
+
+input:focus{
+  border-color:#fff;
+  outline:2px solid rgba(255,255,255,.15);
+}
+
+.row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.qty{
+  display:flex;
+  align-items:center;
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+  background:#000;
+}
+
+.qty button{
+  width:44px;
+  height:46px;
+  border:0;
+  background:transparent;
+  color:#fff;
+  font-size:20px;
+  cursor:pointer;
+}
+
+.qty input{
+  border:0;
+  border-radius:0;
+  text-align:center;
+}
+
+.total{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  border-top:1px solid var(--line);
+  padding-top:14px;
+}
+
+#total{
+  font:700 24px 'Space Grotesk';
+}
+
+.msg{
+  font-size:14px;
+  min-height:20px;
+}
+
+.msg.err{
+  color:#ff6b7a;
+}
+
+.done{
+  padding:40px 28px;
+  text-align:center;
+  display:none;
+}
+
+dialog.sent form,
+dialog.sent .mhead{
+  display:none;
+}
+
+dialog.sent .done{
+  display:block;
+}
+
+/* TOAST */
+
+#toast{
+  position:fixed;
+  left:50%;
+  bottom:24px;
+  z-index:70;
+  transform:translate(-50%,150%);
+  background:#fff;
+  color:#000;
+  padding:12px 20px;
+  border-radius:999px;
+  font-weight:600;
+  transition:.4s;
+}
+
+#toast.show{
+  transform:translate(-50%,0);
+}
+
+/* MOBILE */
+
 @media(max-width:860px){
-  nav .w{height:62px}
-  .burger{display:block}
-  .links{position:absolute;top:62px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;padding:12px 16px 20px;background:rgba(0,0,0,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);font-size:17px;clip-path:inset(0 0 100% 0);visibility:hidden;transition:clip-path .35s var(--ease),visibility .35s}
-  nav.open .links{clip-path:inset(0 0 0 0);visibility:visible}
-  .links a:not(.pill){padding:14px 12px;border-radius:12px}
-  .pill{margin:8px 0 0;text-align:center;padding:12px}
-  .hero,.prod,.micro,.soc{grid-template-columns:1fr}
-  .hero{gap:36px;padding:32px 0 72px}
-  .hero::before{width:380px;height:380px;right:-140px}
-  .photo{max-width:340px;order:-1}
-  .pimg{min-height:320px}
-  .pinfo{padding:28px}
-  .pinfo .now{font-size:46px}
-  .pinfo h4{font-size:28px}
-  section{padding:68px 0}
-  .scroll-hint{display:none}
-  #video{padding:56px 0 68px}
-  .vframe{border-radius:18px}
-  .mbar{display:flex}
-  #top{bottom:96px}
+
+  nav .w{
+    height:62px;
+  }
+
+  .burger{
+    display:block;
+  }
+
+  .links{
+    position:absolute;
+    top:62px;
+    left:0;
+    right:0;
+    flex-direction:column;
+    align-items:stretch;
+    gap:4px;
+    padding:12px 16px 20px;
+    background:rgba(0,0,0,.96);
+    border-bottom:1px solid var(--line);
+    visibility:hidden;
+    transform:translateY(-10px);
+    opacity:0;
+    transition:.25s;
+  }
+
+  nav.open .links{
+    visibility:visible;
+    transform:none;
+    opacity:1;
+  }
+
+  .links a:not(.pill){
+    padding:14px 12px;
+  }
+
+  .pill{
+    margin:8px 0 0;
+    text-align:center;
+    padding:12px;
+  }
+
+  .hero,
+  .prod,
+  .micro,
+  .soc,
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    gap:36px;
+    padding:32px 0 72px;
+  }
+
+  .photo{
+    max-width:340px;
+    width:100%;
+    margin:auto;
+    order:-1;
+  }
+
+  section{
+    padding:68px 0;
+  }
+
+  .pimg{
+    min-height:320px;
+  }
+
+  .pinfo{
+    padding:28px;
+  }
+
+  .pinfo h4{
+    font-size:28px;
+  }
+
+  .about{
+    gap:30px;
+  }
+
+  .about-img{
+    max-width:420px;
+  }
 }
+
 @media(max-width:480px){
-  .w{padding:0 16px}
-  .btns .btn{flex:1 1 100%}
-  .soc a{padding:24px}
-  .soc b{font-size:22px}
-  .mhead,form{padding-left:20px;padding-right:20px}
-  .row{grid-template-columns:1fr}
+
+  .w{
+    padding:0 16px;
+  }
+
+  .btns .btn{
+    flex:1 1 100%;
+  }
+
+  .soc a{
+    padding:22px;
+  }
+
+  .row{
+    grid-template-columns:1fr;
+  }
+
+  .mhead,
+  form{
+    padding-left:20px;
+    padding-right:20px;
+  }
 }
-@media(min-width:861px) and (max-width:1060px){.soc .arrow{display:none}}
-@media(hover:none){.box:hover{transform:none}.prod:hover{transform:none}}
+
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .rv{opacity:1;transform:none}
+
+  *,
+  *::before,
+  *::after{
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important;
+  }
+
+  .rv{
+    opacity:1;
+    transform:none;
+  }
 }
 </style>
 </head>
-<body class="no-js">
+
+<body>
+
 <div id="prog" aria-hidden="true"></div>
 
-<nav id="nav"><div class="w">
-  <a class="logo" href="#"><i></i>NOVACOL</a>
-  <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
-  <div class="links" id="menu">
-    <a href="#productos">Productos</a><a href="#video">Video</a><a href="#comunidad">Comunidad</a><a href="#redes">Redes</a>
-    <a class="pill" href="https://instagram.com/novacol10_" target="_blank" rel="noopener">@novacol10_</a>
+<!-- =========================
+     NAVEGACIÓN
+========================= -->
+
+<nav id="nav">
+  <div class="w">
+
+    <a class="logo" href="#inicio" aria-label="NOVACOL inicio">
+      <i></i>NOVACOL
+    </a>
+
+    <button
+      class="burger"
+      id="burger"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="links" id="menu">
+      <a href="#sobre">NOVACOL</a>
+      <a href="#productos">Productos</a>
+      <a href="#video">Videos</a>
+      <a href="#comunidad">Comunidad</a>
+      <a href="#redes">Redes</a>
+
+      <a
+        class="pill"
+        href="https://instagram.com/novacol10_"
+        target="_blank"
+        rel="noopener">
+        @novacol10_
+      </a>
+    </div>
+
   </div>
-</div></nav>
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="w hero" id="inicio">
+
   <div>
-    <span class="tag rv"><span class="dot"></span>⚽ Comunidad de microfútbol</span>
-    <h1 class="rv" style="--d:.08s">NOVACOL</h1>
-    <h2 class="rv" style="--d:.16s">La comunidad de fútbol hecha para los que juegan en <span class="acc">cancha chica</span>.</h2>
-    <p class="rv" style="--d:.24s">Partidos, retos, jugadas y parche. Si el toque rápido y el túnel son lo tuyo, aquí encuentras tu equipo.</p>
+
+    <span class="tag rv">
+      <span class="dot"></span>
+      ⚽ Comunidad de fútbol y microfútbol
+    </span>
+
+    <h1 class="rv" style="--d:.08s">
+      NOVACOL
+    </h1>
+
+    <h2 class="rv" style="--d:.16s">
+      La comunidad de fútbol hecha para los que juegan en
+      <span class="acc">cancha chica</span>.
+    </h2>
+
+    <p class="rv" style="--d:.24s">
+      Retos, jugadas, partidos, fútbol 1 vs 1 y contenido para quienes viven el fútbol dentro y fuera de la cancha.
+    </p>
+
     <div class="btns rv" style="--d:.32s">
-      <a class="btn" href="#productos">Pedir mi gorra <span class="ar">→</span></a>
-      <a class="btn ghost" href="https://instagram.com/novacol10_" target="_blank" rel="noopener">Seguir en Instagram</a>
+
+      <a class="btn" href="#comunidad">
+        Conoce NOVACOL
+        <span class="ar">→</span>
+      </a>
+
+      <a
+        class="btn ghost"
+        href="https://instagram.com/novacol10_"
+        target="_blank"
+        rel="noopener">
+        Seguir en Instagram
+      </a>
+
     </div>
+
   </div>
+
+
   <div class="photo rv" style="--d:.2s">
-    <div class="ph">Pon tu foto en<br>img/foto.jpg</div>
-    <img src="img/foto.jpg" alt="Fundador de Novacol" onerror="this.remove()">
-    <div class="chip"><b>@novacol10_</b>Instagram · TikTok @novacol10</div>
+
+    <img
+      src="img/foto.jpg"
+      alt="Sebastián Nova, creador de NOVACOL"
+      width="800"
+      height="1000"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async">
+
+    <div class="chip">
+      <b>@novacol10_</b>
+      Creador de NOVACOL
+    </div>
+
   </div>
-  <span class="scroll-hint" aria-hidden="true"></span>
+
 </header>
 
-<section id="productos" class="band alt"><div class="w">
-  <span class="eyebrow rv"><span class="live"></span>Promoción vigente</span>
-  <h3 class="t rv" style="--d:.06s">Gorra Novacol</h3>
-  <p class="sub rv" style="--d:.12s">Lleva la comunidad contigo, dentro y fuera de la cancha.</p>
-  <article class="prod rv" style="--d:.18s">
-    <div class="pimg">
-      <span class="halo" aria-hidden="true"></span>
-      <span class="spot" aria-hidden="true"></span>
-      <span class="promo">EN DESCUENTO</span>
-      <div class="tilt">
-        <svg viewBox="0 0 300 300" aria-label="Gorra negra Novacol">
-          <ellipse cx="150" cy="262" rx="105" ry="12" fill="#000" opacity=".5"/>
-          <path d="M58 190C58 100 105 60 155 60C212 60 244 108 244 190Z" fill="#0b0b0b" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
-          <path d="M156 62C138 110 138 160 146 190M110 80C98 120 98 160 100 190M205 80C215 120 218 160 216 190" fill="none" stroke="#fff" stroke-opacity=".15"/>
-          <path d="M36 190C108 216 222 216 278 172C284 202 242 234 150 236C90 236 48 218 36 190Z" fill="#141414" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
-          <circle cx="155" cy="60" r="7" fill="#0b0b0b" stroke="#fff" stroke-opacity=".55" stroke-width="2"/>
-          <text x="151" y="150" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="29" letter-spacing="2" fill="#fff">NOVACOL</text>
-        </svg>
-        <img src="img/gorra.jpg" alt="Gorra negra Novacol" onerror="this.remove()">
+
+<!-- =========================
+     SOBRE NOVACOL / SEBASTIÁN
+========================= -->
+
+<section id="sobre" class="band">
+
+  <div class="w about">
+
+    <div class="about-img rv">
+
+      <img
+        src="img/foto.jpg"
+        alt="Sebastián Nova - fundador de NOVACOL"
+        width="800"
+        height="800"
+        loading="lazy"
+        decoding="async">
+
+    </div>
+
+
+    <div class="about-copy rv" style="--d:.12s">
+
+      <span class="tag">
+        ⚽ CONOCE A NOVACOL
+      </span>
+
+      <h4>
+        Fútbol.<br>
+        Comunidad.<br>
+        <span class="acc">Pasión.</span>
+      </h4>
+
+      <p>
+        Soy Sebastián Nova, creador de NOVACOL y apasionado por el fútbol y el microfútbol.
+      </p>
+
+      <p>
+        NOVACOL nace de la cancha, de los partidos con amigos, de los retos, las jugadas y de esa pasión que hace que siempre queramos volver a jugar.
+      </p>
+
+      <p>
+        Este espacio está pensado para reunir a jugadores, creadores y amantes del fútbol alrededor de una misma comunidad.
+      </p>
+
+      <div class="quote">
+        "Piso de cemento y sueños en las nubes."
       </div>
+
     </div>
-    <div class="pinfo">
-      <span class="brand">NOVACOL</span>
-      <h4>Gorra negra Novacol</h4>
-      <div class="pr"><span class="now" data-count="50000">$50.000</span><span class="save">En descuento</span></div>
-      <ul>
-        <li style="--i:0">Color negro con el logo NOVACOL</li>
-        <li style="--i:1">Para entrenar, jugar y salir</li>
-        <li style="--i:2">Pide por aquí y te contactamos</li>
-      </ul>
-      <button class="btn btn-cta" data-producto="Gorra negra Novacol" data-valor="50000">Pedir ahora <span class="ar">→</span></button>
-      <div class="perks" aria-hidden="true"><span>📦 Pago y envío coordinados</span><span>💬 Te contactamos</span></div>
-      <p class="note">Coordinamos pago y envío contigo después de recibir tu pedido.</p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCTO
+========================= -->
+
+<section id="productos" class="band alt">
+
+  <div class="w">
+
+    <span class="tag rv">
+      ● Producto NOVACOL
+    </span>
+
+    <h3 class="t rv" style="--d:.06s">
+      Lleva NOVACOL contigo.
+    </h3>
+
+    <p class="sub rv" style="--d:.12s">
+      La primera pieza de nuestra comunidad. Dentro y fuera de la cancha.
+    </p>
+
+
+    <article class="prod rv" style="--d:.18s">
+
+      <div class="pimg">
+
+        <span class="promo">
+          EN DESCUENTO
+        </span>
+
+        <img
+          src="img/gorra.jpg"
+          alt="Gorra negra oficial NOVACOL"
+          width="800"
+          height="800"
+          loading="lazy"
+          decoding="async">
+
+      </div>
+
+
+      <div class="pinfo">
+
+        <span class="brand">
+          NOVACOL
+        </span>
+
+        <h4>
+          Gorra negra NOVACOL
+        </h4>
+
+        <div>
+          <span class="now">
+            $50.000
+          </span>
+        </div>
+
+        <ul>
+
+          <li>
+            Diseño negro con identidad NOVACOL
+          </li>
+
+          <li>
+            Para entrenar, jugar y salir
+          </li>
+
+          <li>
+            Pedido directo desde la página
+          </li>
+
+        </ul>
+
+        <button
+          class="btn btn-cta"
+          data-producto="Gorra negra Novacol"
+          data-valor="50000">
+          Pedir ahora
+          <span class="ar">→</span>
+        </button>
+
+        <div class="perks">
+          <span>📦 Envíos coordinados</span>
+          <span>💬 Atención directa</span>
+        </div>
+
+        <p class="note">
+          Coordinamos pago y envío contigo después de recibir tu pedido.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     VIDEO
+========================= -->
+
+<section id="video">
+
+  <div class="w">
+
+    <div class="vhead">
+
+      <div>
+
+        <h3 class="t rv">
+          Fútbol y jugadas.
+        </h3>
+
+        <p class="sub rv">
+          Mira parte del contenido que estamos construyendo alrededor de NOVACOL.
+        </p>
+
+      </div>
+
+      <a
+        class="vbtn rv"
+        href="https://www.youtube.com/@Novacol10"
+        target="_blank"
+        rel="noopener">
+        ▶ Ver más en YouTube
+      </a>
+
     </div>
-  </article>
-  <!-- Para otro producto, duplica el bloque <article class="prod"> y cambia nombre y data-valor -->
-</div></section>
 
-<section id="video"><div class="w">
-  <div class="vhead">
-    <div>
-      <h3 class="t rv">Las mejores jugadas</h3>
-      <p class="sub rv">Toques, túneles y goles de la comunidad Novacol en cancha chica.</p>
+
+    <div class="vframe rv" id="vframe">
+
+      <button
+        class="vpre"
+        id="vpre"
+        type="button"
+        aria-label="Reproducir video">
+        <span>▶</span>
+      </button>
+
     </div>
-    <div class="vctl rv">
-      <button class="vbtn" id="vSound" type="button" hidden>🔇 Activar sonido</button>
-      <a class="vbtn" href="https://www.youtube.com/watch?v=LFR0kula7ls" target="_blank" rel="noopener">▶ Ver en YouTube</a>
-    </div>
+
   </div>
-  <div class="vframe rv" id="vframe">
-    <button class="vpre" id="vpre" type="button" aria-label="Reproducir video"><span>▶</span></button>
+
+</section>
+
+
+<!-- =========================
+     MARQUESINA
+========================= -->
+
+<div class="marq" aria-hidden="true">
+
+  <div>
+
+    <span>MICROFÚTBOL</span>
+    <span>★</span>
+    <span>FÚTBOL</span>
+    <span>★</span>
+    <span>1 VS 1</span>
+    <span>★</span>
+    <span>RETOS</span>
+    <span>★</span>
+    <span>NOVACOL</span>
+    <span>★</span>
+
+    <span>MICROFÚTBOL</span>
+    <span>★</span>
+    <span>FÚTBOL</span>
+    <span>★</span>
+    <span>1 VS 1</span>
+    <span>★</span>
+    <span>RETOS</span>
+    <span>★</span>
+    <span>NOVACOL</span>
+    <span>★</span>
+
   </div>
-</div></section>
 
-<div class="marq" aria-hidden="true"><div>
-  <span>MICROFÚTBOL</span><span>★</span><span>PARCHE</span><span>★</span><span>GOLES</span><span>★</span><span>RETOS</span><span>★</span><span>NOVACOL</span><span>★</span>
-  <span>MICROFÚTBOL</span><span>★</span><span>PARCHE</span><span>★</span><span>GOLES</span><span>★</span><span>RETOS</span><span>★</span><span>NOVACOL</span><span>★</span>
-</div></div>
-
-<section id="comunidad" class="band"><div class="w micro">
-  <div class="rv">
-    <p class="big">Cancha chica.<br><em>Toque rápido.</em><br>Parche grande.</p>
-  </div>
-  <div class="list">
-    <div class="box rv"><div class="ic">🔥</div><div><h4>Retos y jugadas</h4><p>Muestra tu mejor jugada y reta al parche.</p></div></div>
-    <div class="box rv" style="--d:.1s"><div class="ic">🤝</div><div><h4>Encuentra tu equipo</h4><p>Conecta con jugadores de microfútbol de tu zona.</p></div></div>
-    <div class="box rv" style="--d:.2s"><div class="ic">🏆</div><div><h4>Contenido de cancha</h4><p>Videos, partidos y momentos de la comunidad.</p></div></div>
-  </div>
-</div></section>
-
-<section id="redes" class="band"><div class="w">
-  <h3 class="t rv">Únete al parche</h3>
-  <p class="sub rv">Síguenos, etiquétanos en tus jugadas y sé parte de Novacol.</p>
-  <div class="soc">
-    <a class="box rv ig" href="https://instagram.com/novacol10_" target="_blank" rel="noopener">
-      <span class="si" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg></span>
-      <div><small>Instagram</small><b>@novacol10_</b></div><span class="arrow">↗</span></a>
-    <a class="box rv tt" style="--d:.1s" href="https://tiktok.com/@novacol10" target="_blank" rel="noopener">
-      <span class="si" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span>
-      <div><small>TikTok</small><b>@novacol10</b></div><span class="arrow">↗</span></a>
-    <a class="box rv yt" style="--d:.2s" href="https://www.youtube.com/@Novacol10" target="_blank" rel="noopener">
-      <span class="si" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></span>
-      <div><small>YouTube</small><b>@Novacol10</b></div><span class="arrow">↗</span></a>
-  </div>
-</div></section>
-
-<footer>© <span id="y"></span> Novacol · Comunidad de microfútbol · <a href="https://instagram.com/novacol10_" target="_blank" rel="noopener">Instagram</a> · <a href="https://tiktok.com/@novacol10" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.youtube.com/@Novacol10" target="_blank" rel="noopener">YouTube</a></footer>
-
-<button id="top" aria-label="Volver arriba">↑</button>
-
-<div class="mbar" id="mbar" aria-hidden="true">
-  <div><small id="mbarName">Gorra Novacol</small><b id="mbarPrice"></b></div>
-  <button class="btn" id="mbarBtn" tabindex="-1">Pedir ahora</button>
 </div>
+
+
+<!-- =========================
+     COMUNIDAD
+========================= -->
+
+<section id="comunidad" class="band">
+
+  <div class="w micro">
+
+    <div class="rv">
+
+      <p class="big">
+        Cancha chica.<br>
+        <em>Toque rápido.</em><br>
+        Parche grande.
+      </p>
+
+    </div>
+
+
+    <div class="list">
+
+      <div class="box rv">
+
+        <div class="ic">🔥</div>
+
+        <div>
+          <h4>Retos y jugadas</h4>
+          <p>
+            Comparte tu mejor jugada y reta al parche.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="box rv" style="--d:.1s">
+
+        <div class="ic">⚽</div>
+
+        <div>
+          <h4>1 vs 1</h4>
+          <p>
+            Competencia, niveles y retos para encontrar al mejor.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="box rv" style="--d:.2s">
+
+        <div class="ic">🏆</div>
+
+        <div>
+          <h4>Eventos NOVACOL</h4>
+          <p>
+            Campeonatos, encuentros y experiencias para la comunidad.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     REDES
+========================= -->
+
+<section id="redes" class="band">
+
+  <div class="w">
+
+    <h3 class="t rv">
+      Únete al parche.
+    </h3>
+
+    <p class="sub rv">
+      Síguenos en redes y acompaña todo lo que estamos construyendo en NOVACOL.
+    </p>
+
+
+    <div class="soc">
+
+      <a
+        class="box rv"
+        href="https://instagram.com/novacol10_"
+        target="_blank"
+        rel="noopener">
+
+        <span class="si">◎</span>
+
+        <div>
+          <small>Instagram</small>
+          <b>@novacol10_</b>
+        </div>
+
+        <span class="arrow">↗</span>
+
+      </a>
+
+
+      <a
+        class="box rv"
+        style="--d:.1s"
+        href="https://tiktok.com/@novacol10"
+        target="_blank"
+        rel="noopener">
+
+        <span class="si">♪</span>
+
+        <div>
+          <small>TikTok</small>
+          <b>@novacol10</b>
+        </div>
+
+        <span class="arrow">↗</span>
+
+      </a>
+
+
+      <a
+        class="box rv"
+        style="--d:.2s"
+        href="https://www.youtube.com/@Novacol10"
+        target="_blank"
+        rel="noopener">
+
+        <span class="si">▶</span>
+
+        <div>
+          <small>YouTube</small>
+          <b>@Novacol10</b>
+        </div>
+
+        <span class="arrow">↗</span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  © <span id="y"></span> NOVACOL · Comunidad de fútbol y microfútbol
+
+  ·
+
+  <a href="https://instagram.com/novacol10_" target="_blank" rel="noopener">
+    Instagram
+  </a>
+
+  ·
+
+  <a href="https://tiktok.com/@novacol10" target="_blank" rel="noopener">
+    TikTok
+  </a>
+
+  ·
+
+  <a href="https://www.youtube.com/@Novacol10" target="_blank" rel="noopener">
+    YouTube
+  </a>
+
+</footer>
+
+
+<button id="top" aria-label="Volver arriba">
+  ↑
+</button>
+
+
+<!-- =========================
+     TOAST
+========================= -->
 
 <div id="toast" role="status" aria-live="polite"></div>
 
+
+<!-- =========================
+     MODAL PEDIDO
+========================= -->
+
 <dialog id="modal" aria-labelledby="mTitle">
+
   <div class="mhead">
-    <div class="thumb">🧢</div>
-    <div><h5 id="mTitle">Haz tu pedido</h5><p id="resumen"></p></div>
-    <button class="x" type="button" data-close aria-label="Cerrar">✕</button>
+
+    <div>
+      <h5 id="mTitle">
+        Haz tu pedido
+      </h5>
+
+      <p id="resumen"></p>
+    </div>
+
+    <button
+      class="x"
+      type="button"
+      data-close
+      aria-label="Cerrar">
+      ✕
+    </button>
+
   </div>
+
+
   <form id="pedido" novalidate>
-    <div class="f"><label for="f-nombre">Nombre completo</label><input id="f-nombre" name="nombre" required autocomplete="name" placeholder="Ej: Juan Pérez" minlength="3"><span class="e">Escribe tu nombre completo.</span></div>
+
+    <div class="f">
+
+      <label for="f-nombre">
+        Nombre completo
+      </label>
+
+      <input
+        id="f-nombre"
+        name="nombre"
+        required
+        autocomplete="name"
+        placeholder="Ej: Juan Pérez"
+        minlength="5">
+
+    </div>
+
+
     <div class="row">
-      <div class="f"><label for="f-tel">Teléfono / WhatsApp</label><input id="f-tel" name="telefono" type="tel" required autocomplete="tel" inputmode="tel" placeholder="300 123 4567"><span class="e">Número no válido (mín. 7 dígitos).</span></div>
-      <div class="f"><label for="f-ciudad">Ciudad</label><input id="f-ciudad" name="ciudad" required autocomplete="address-level2" placeholder="Ej: Bogotá"><span class="e">¿A qué ciudad lo enviamos?</span></div>
+
+      <div class="f">
+
+        <label for="f-tel">
+          WhatsApp
+        </label>
+
+        <input
+          id="f-tel"
+          name="telefono"
+          type="tel"
+          required
+          autocomplete="tel"
+          inputmode="tel"
+          placeholder="300 123 4567">
+
+      </div>
+
+
+      <div class="f">
+
+        <label for="f-ciudad">
+          Ciudad
+        </label>
+
+        <input
+          id="f-ciudad"
+          name="ciudad"
+          required
+          autocomplete="address-level2"
+          placeholder="Bogotá">
+
+      </div>
+
     </div>
-    <div class="f"><label for="f-email">Correo electrónico</label><input id="f-email" name="email" type="email" required autocomplete="email" placeholder="tucorreo@ejemplo.com"><span class="e">Revisa el formato del correo.</span></div>
-    <div class="f"><label for="f-dir">Dirección de entrega</label><input id="f-dir" name="direccion" required autocomplete="street-address" placeholder="Calle, número, barrio" minlength="5"><span class="e">Escribe una dirección de entrega.</span></div>
-    <div class="f"><label for="f-cant">Cantidad</label>
-      <div class="qty"><button type="button" data-step="-1" aria-label="Quitar uno">−</button><input id="f-cant" name="cantidad" type="number" min="1" max="20" value="1" required inputmode="numeric"><button type="button" data-step="1" aria-label="Agregar uno">+</button></div>
+
+
+    <div class="f">
+
+      <label for="f-email">
+        Correo electrónico
+      </label>
+
+      <input
+        id="f-email"
+        name="email"
+        type="email"
+        required
+        autocomplete="email"
+        placeholder="tucorreo@ejemplo.com">
+
     </div>
-    <div class="total"><span>Total a pagar</span><span id="total"></span></div>
-    <p class="msg" id="msg" role="alert"></p>
-    <button class="btn" id="enviar" type="submit">Enviar pedido</button>
+
+
+    <div class="f">
+
+      <label for="f-dir">
+        Dirección de entrega
+      </label>
+
+      <input
+        id="f-dir"
+        name="direccion"
+        required
+        autocomplete="street-address"
+        placeholder="Calle, número, barrio"
+        minlength="5">
+
+    </div>
+
+
+    <div class="f">
+
+      <label for="f-cant">
+        Cantidad
+      </label>
+
+      <div class="qty">
+
+        <button
+          type="button"
+          data-step="-1"
+          aria-label="Quitar uno">
+          −
+        </button>
+
+        <input
+          id="f-cant"
+          name="cantidad"
+          type="number"
+          min="1"
+          max="20"
+          value="1"
+          required>
+
+        <button
+          type="button"
+          data-step="1"
+          aria-label="Agregar uno">
+          +
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="total">
+
+      <span>Total a pagar</span>
+
+      <span id="total"></span>
+
+    </div>
+
+
+    <p
+      class="msg"
+      id="msg"
+      role="alert">
+    </p>
+
+
+    <button
+      class="btn"
+      id="enviar"
+      type="submit">
+      Enviar pedido
+    </button>
+
   </form>
+
+
   <div class="done">
-    <svg viewBox="0 0 80 80" fill="none" stroke="var(--acc)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="40" cy="40" r="36"/><path d="M24 41l11 11 22-24"/></svg>
-    <h5>¡Pedido enviado!</h5>
-    <p>Te contactaremos pronto para coordinar el pago y la entrega.</p>
-    <button class="btn" type="button" data-close>Listo</button>
+
+    <h5>
+      ¡Pedido enviado!
+    </h5>
+
+    <p>
+      Te contactaremos pronto para coordinar el pago y la entrega.
+    </p>
+
+    <button
+      class="btn"
+      type="button"
+      data-close>
+      Listo
+    </button>
+
   </div>
+
 </dialog>
 
+
 <script>
+
+/* =====================================
+   CONFIGURACIÓN
+===================================== */
+
 const EMAIL="jhons.nova@gmail.com";
-const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const VIDEO_ID="LFR0kula7ls";
+
+const $=(s,c=document)=>c.querySelector(s);
+const $$=(s,c=document)=>[...c.querySelectorAll(s)];
+
+const reduce=matchMedia(
+  '(prefers-reduced-motion: reduce)'
+).matches;
+
 const cop=n=>'$'+n.toLocaleString('es-CO')+' COP';
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-document.body.classList.remove('no-js');
+
 $('#y').textContent=new Date().getFullYear();
 
-/* ---------- Video de YouTube (segunda sección) ----------
-   Se reproduce solo y silenciado apenas abre la página
-   (los navegadores no permiten autoplay con sonido). */
-const VIDEO_ID='LFR0kula7ls';
-const vFrame=$('#vframe'),vSound=$('#vSound');
-let yt=null,muted=true;
-const ytCmd=(func,args=[])=>yt&&yt.contentWindow.postMessage(JSON.stringify({event:'command',func,args}),'*');
-function loadVideo(){
-  if(yt)return;
-  yt=document.createElement('iframe');
-  const origin=location.protocol.startsWith('http')?'&origin='+encodeURIComponent(location.origin):'';
-  yt.src=`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}&controls=1&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1${origin}`;
-  yt.referrerPolicy='strict-origin-when-cross-origin';
-  yt.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
-  yt.allowFullscreen=true;yt.title='Las mejores jugadas para futsal | Novacol';
-  vFrame.appendChild(yt);vFrame.classList.add('on');vSound.hidden=false;
+
+/* =====================================
+   MENÚ
+===================================== */
+
+const nav=$('#nav');
+const burger=$('#burger');
+
+function setMenu(open){
+
+  nav.classList.toggle('open',open);
+
+  burger.setAttribute(
+    'aria-expanded',
+    String(open)
+  );
+
+  burger.setAttribute(
+    'aria-label',
+    open ? 'Cerrar menú' : 'Abrir menú'
+  );
+
 }
-$('#vpre').addEventListener('click',loadVideo);
-loadVideo();/* arranca apenas abre la página */
-/* Si la persona baja y vuelve, se asegura de que siga sonando */
-new IntersectionObserver(([e])=>{if(e.isIntersecting)ytCmd('playVideo')},{threshold:.35}).observe(vFrame);
-vSound.addEventListener('click',()=>{
-  muted=!muted;
-  if(muted)ytCmd('mute');else{ytCmd('unMute');ytCmd('setVolume',[70]);ytCmd('playVideo')}
-  vSound.textContent=muted?'🔇 Activar sonido':'🔊 Silenciar';
+
+burger.addEventListener(
+  'click',
+  ()=>setMenu(!nav.classList.contains('open'))
+);
+
+$$('#menu a').forEach(a=>{
+  a.addEventListener(
+    'click',
+    ()=>setMenu(false)
+  );
 });
 
-/* ---------- Toast ---------- */
-let toastT;
-function toast(text,err){const t=$('#toast');t.textContent=text;t.className=err?'err show':'show';clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),3500)}
 
-/* ---------- Navegación: menú móvil, sombra al hacer scroll, enlace activo ---------- */
-const nav=$('#nav'),burger=$('#burger');
-const setMenu=open=>{nav.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);burger.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú')};
-burger.addEventListener('click',()=>setMenu(!nav.classList.contains('open')));
-$$('#menu a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target))setMenu(false)});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+/* =====================================
+   SCROLL
+===================================== */
+
+const prog=$('#prog');
+const topBtn=$('#top');
+
+function onScroll(){
+
+  const y=scrollY;
+
+  const max=
+    document.documentElement.scrollHeight-innerHeight;
+
+  prog.style.transform=
+    `scaleX(${max>0?y/max:0})`;
+
+  nav.classList.toggle(
+    'scrolled',
+    y>10
+  );
+
+  topBtn.classList.toggle(
+    'show',
+    y>innerHeight*.8
+  );
+
+}
+
+addEventListener(
+  'scroll',
+  onScroll,
+  {passive:true}
+);
+
+onScroll();
+
+topBtn.addEventListener(
+  'click',
+  ()=>{
+    scrollTo({
+      top:0,
+      behavior:reduce?'auto':'smooth'
+    });
+  }
+);
+
+
+/* =====================================
+   ANIMACIONES
+===================================== */
+
+const rvObs=new IntersectionObserver(
+  entries=>{
+    entries.forEach(entry=>{
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add('in');
+
+        rvObs.unobserve(entry.target);
+
+      }
+
+    });
+  },
+  {
+    threshold:.12,
+    rootMargin:'0px 0px -40px 0px'
+  }
+);
+
+$$('.rv').forEach(
+  el=>rvObs.observe(el)
+);
+
+
+/* =====================================
+   ENLACES ACTIVOS
+===================================== */
 
 const navLinks=$$('#menu a[href^="#"]');
-const secObs=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting)navLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
-}),{rootMargin:'-45% 0px -50% 0px'});
-$$('section[id]').forEach(s=>secObs.observe(s));
 
-/* ---------- Scroll: progreso, volver arriba, barra móvil ---------- */
-const prog=$('#prog'),topBtn=$('#top'),mbar=$('#mbar'),prodSec=$('#productos');
-let prodVisible=false,ticking=false;
-new IntersectionObserver(([e])=>{prodVisible=e.isIntersecting;onScroll()},{threshold:.15}).observe(prodSec);
-function onScroll(){
-  const y=scrollY,max=document.documentElement.scrollHeight-innerHeight;
-  prog.style.transform=`scaleX(${max>0?y/max:0})`;
-  nav.classList.toggle('scrolled',y>10);
-  topBtn.classList.toggle('show',y>innerHeight*.8);
-  const showBar=y>innerHeight*.6&&!prodVisible;
-  mbar.classList.toggle('show',showBar);mbar.setAttribute('aria-hidden',!showBar);
-  $('#mbarBtn').tabIndex=showBar?0:-1;
-  ticking=false;
+const secObs=new IntersectionObserver(
+  entries=>{
+    entries.forEach(entry=>{
+
+      if(entry.isIntersecting){
+
+        navLinks.forEach(a=>{
+
+          a.classList.toggle(
+            'on',
+            a.getAttribute('href')===
+            '#'+entry.target.id
+          );
+
+        });
+
+      }
+
+    });
+  },
+  {
+    rootMargin:'-45% 0px -50% 0px'
+  }
+);
+
+$$('section[id]').forEach(
+  section=>secObs.observe(section)
+);
+
+
+/* =====================================
+   VIDEO
+===================================== */
+
+const vFrame=$('#vframe');
+
+let yt=null;
+
+function loadVideo(){
+
+  if(yt)return;
+
+  yt=document.createElement('iframe');
+
+  const origin=
+    location.protocol.startsWith('http')
+      ? '&origin='+encodeURIComponent(location.origin)
+      : '';
+
+  yt.src=
+    `https://www.youtube.com/embed/${VIDEO_ID}`+
+    `?autoplay=1`+
+    `&mute=1`+
+    `&controls=1`+
+    `&playsinline=1`+
+    `&rel=0`+
+    `&modestbranding=1`+
+    `&enablejsapi=1`+
+    origin;
+
+  yt.loading='lazy';
+
+  yt.referrerPolicy=
+    'strict-origin-when-cross-origin';
+
+  yt.allow=
+    'autoplay; encrypted-media; picture-in-picture; fullscreen';
+
+  yt.allowFullscreen=true;
+
+  yt.title=
+    'NOVACOL - fútbol y microfútbol';
+
+  vFrame.appendChild(yt);
+
+  vFrame.classList.add('on');
+
 }
-addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});
-addEventListener('resize',onScroll);
-onScroll();
-topBtn.addEventListener('click',()=>scrollTo({top:0,behavior:reduce?'auto':'smooth'}));
 
-/* ---------- Animaciones al aparecer ---------- */
-const rvObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rvObs.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-$$('.rv').forEach(el=>rvObs.observe(el));
+$('#vpre').addEventListener(
+  'click',
+  loadVideo
+);
 
-/* ---------- Efecto 3D en la imagen del producto ---------- */
-$$('.pimg').forEach(box=>{
-  const t=$('.tilt',box);if(reduce)return;
-  box.addEventListener('pointermove',e=>{
-    if(e.pointerType!=='mouse')return;
-    const r=box.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-    t.style.transform=`rotateY(${x*14}deg) rotateX(${-y*14}deg) scale(1.03)`;
-    box.style.setProperty('--px',`${(x+.5)*100}%`);box.style.setProperty('--py',`${(y+.5)*100}%`);
-  });
-  box.addEventListener('pointerleave',()=>t.style.transform='');
-  // En celular, la gorra rebota al tocarla
-  box.addEventListener('pointerdown',e=>{
-    if(e.pointerType==='mouse')return;
-    box.classList.remove('tap');void box.offsetWidth;box.classList.add('tap');
-  });
-});
 
-/* ---------- Tarjeta de producto: luz que sigue al mouse y precio animado ---------- */
-$$('.prod').forEach(card=>{
-  if(!reduce)card.addEventListener('pointermove',e=>{
-    if(e.pointerType!=='mouse')return;
-    const r=card.getBoundingClientRect();
-    card.style.setProperty('--mx',`${e.clientX-r.left}px`);card.style.setProperty('--my',`${e.clientY-r.top}px`);
-  });
-  const price=$('.now[data-count]',card);
-  if(!price||reduce)return;
-  const target=+price.dataset.count,fmt=n=>'$'+Math.round(n).toLocaleString('es-CO');
-  new IntersectionObserver(([e],obs)=>{
-    if(!e.isIntersecting)return;obs.disconnect();
-    const t0=performance.now(),dur=1100;
-    (function step(now){
-      const p=Math.min(1,(now-t0)/dur),k=1-Math.pow(1-p,3);
-      price.textContent=fmt(target*k);
-      if(p<1)requestAnimationFrame(step);else price.textContent=fmt(target);
-    })(t0);
-  },{threshold:.4}).observe(card);
-});
+/* =====================================
+   MODAL
+===================================== */
 
-/* Cerrar diálogos: botones [data-close] y clic fuera */
-$$('dialog').forEach(d=>{
-  $$('[data-close]',d).forEach(b=>b.addEventListener('click',()=>d.close()));
-  d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom||d===lb)d.close()}});
-});
+const modal=$('#modal');
+const form=$('#pedido');
+const msg=$('#msg');
+const btn=$('#enviar');
+const tot=$('#total');
+const qty=form.cantidad;
 
-/* ---------- Pedido ---------- */
-const modal=$('#modal'),form=$('#pedido'),msg=$('#msg'),btn=$('#enviar'),tot=$('#total'),qty=form.cantidad;
-const SAVE_KEY='novacol-datos';
 let prod={};
 
 const rules={
-  nombre:v=>v.trim().split(/\s+/).filter(Boolean).length>=2&&v.trim().length>=5,
-  telefono:v=>{const d=v.replace(/\D/g,'');return d.length>=7&&d.length<=15},
-  email:v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
-  ciudad:v=>v.trim().length>=2,
-  direccion:v=>v.trim().length>=5,
-  cantidad:v=>+v>=1&&+v<=20
+
+  nombre:v=>
+    v.trim().split(/\s+/).filter(Boolean).length>=2,
+
+  telefono:v=>{
+    const d=v.replace(/\D/g,'');
+    return d.length>=7 && d.length<=15;
+  },
+
+  email:v=>
+    /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+
+  ciudad:v=>
+    v.trim().length>=2,
+
+  direccion:v=>
+    v.trim().length>=5,
+
+  cantidad:v=>
+    +v>=1 && +v<=20
+
 };
-function check(input,show){
-  const ok=rules[input.name]?rules[input.name](input.value):true,f=input.closest('.f');
-  if(show||f.dataset.touched){f.classList.toggle('bad',!ok);f.classList.toggle('good',ok&&input.name!=='cantidad');input.setAttribute('aria-invalid',!ok)}
-  return ok;
+
+
+function validateInput(input){
+
+  const valid=
+    rules[input.name]
+      ? rules[input.name](input.value)
+      : true;
+
+  input.setAttribute(
+    'aria-invalid',
+    String(!valid)
+  );
+
+  return valid;
+
 }
-$$('input',form).forEach(i=>{
-  i.addEventListener('blur',()=>{if(i.value){i.closest('.f').dataset.touched=1;check(i)}});
-  i.addEventListener('input',()=>{check(i);if(i.name!=='cantidad')saveData()});
+
+
+function updateTotal(){
+
+  const n=Math.min(
+    20,
+    Math.max(
+      1,
+      parseInt(qty.value)||1
+    )
+  );
+
+  qty.value=n;
+
+  tot.textContent=
+    cop(prod.valor*n);
+
+}
+
+
+$$('input',form).forEach(input=>{
+
+  input.addEventListener(
+    'blur',
+    ()=>validateInput(input)
+  );
+
 });
 
-function clampQty(){let n=parseInt(qty.value)||1;n=Math.min(20,Math.max(1,n));return n}
-function upd(animate){
-  const n=clampQty();
-  tot.textContent=cop(prod.valor*n);
-  $('[data-step="-1"]',form).disabled=n<=1;
-  $('[data-step="1"]',form).disabled=n>=20;
-  if(animate&&!reduce){tot.classList.remove('bump');void tot.offsetWidth;tot.classList.add('bump')}
-}
-$$('[data-step]',form).forEach(b=>b.addEventListener('click',()=>{qty.value=clampQty()+ +b.dataset.step;upd(true)}));
-qty.addEventListener('input',()=>upd(true));
-qty.addEventListener('blur',()=>{qty.value=clampQty();upd()});
 
-function saveData(){try{const d={};['nombre','telefono','email','ciudad','direccion'].forEach(k=>d[k]=form[k].value);localStorage.setItem(SAVE_KEY,JSON.stringify(d))}catch(e){}}
-function loadData(){try{const d=JSON.parse(localStorage.getItem(SAVE_KEY)||'{}');Object.entries(d).forEach(([k,v])=>{if(form[k]&&!form[k].value)form[k].value=v})}catch(e){}}
+$$('[data-step]',form).forEach(button=>{
 
-function openOrder(b){
-  prod={nombre:b.dataset.producto,valor:+b.dataset.valor};
-  $('#mTitle').textContent=prod.nombre;
-  $('#resumen').textContent=cop(prod.valor)+' c/u · en descuento';
-  modal.classList.remove('sent');
-  msg.textContent='';msg.className='msg';btn.disabled=false;
-  $$('.f',form).forEach(f=>{f.classList.remove('bad','good');delete f.dataset.touched});
-  qty.value=1;loadData();upd();
-  modal.showModal();
-  const first=$$('input',form).find(i=>!i.value);if(first&&matchMedia('(hover:hover)').matches)first.focus();
-}
-const prodBtns=$$('[data-producto]');
-prodBtns.forEach(b=>b.addEventListener('click',()=>openOrder(b)));
+  button.addEventListener(
+    'click',
+    ()=>{
 
-/* Barra móvil: toma nombre y precio del primer producto */
-if(prodBtns[0]){
-  $('#mbarName').textContent=prodBtns[0].dataset.producto;
-  $('#mbarPrice').textContent=cop(+prodBtns[0].dataset.valor).replace(' COP','');
-  $('#mbarBtn').addEventListener('click',()=>openOrder(prodBtns[0]));
-}
+      const step=
+        Number(button.dataset.step);
 
-form.addEventListener('submit',async e=>{
-  e.preventDefault();
-  const inputs=$$('input',form);
-  inputs.forEach(i=>i.closest('.f').dataset.touched=1);
-  const bad=inputs.filter(i=>!check(i,true));
-  if(bad.length){bad[0].focus();msg.className='msg err';msg.textContent='Revisa los campos marcados en rojo.';return}
-  qty.value=clampQty();
-  if(location.protocol==='file:'){
-    msg.className='msg err';msg.textContent='El envío por correo solo funciona desde la página publicada (no abriendo el archivo en el computador).';
-    return;
-  }
-  const v=k=>form[k].value.trim().replace(/\s+/g,' ');
-  const n=clampQty();
-  /* Lo que llega al correo: cada clave es el título de la fila en la tabla */
-  const data={
-    'Producto':prod.nombre,
-    'Cantidad':n,
-    'Precio unitario':cop(prod.valor),
-    'Total a pagar':cop(prod.valor*n),
-    'Nombre':v('nombre'),
-    'Teléfono / WhatsApp':v('telefono'),
-    'Correo':v('email'),
-    'Ciudad':v('ciudad'),
-    'Dirección de entrega':v('direccion'),
-    'Fecha del pedido':new Date().toLocaleString('es-CO',{dateStyle:'full',timeStyle:'short'}),
-    _subject:`Nuevo pedido Novacol: ${prod.nombre} x${n} - ${v('nombre')}`,
-    _replyto:v('email'),/* al responder el correo le llega al cliente */
-    _template:'table',_captcha:'false'
-  };
-  btn.disabled=true;btn.innerHTML='<span class="spin"></span>Enviando…';msg.className='msg';msg.textContent='';
-  try{
-    const r=await fetch('https://formsubmit.co/ajax/'+EMAIL,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
-    const j=await r.json().catch(()=>({}));
-    if(!r.ok||j.success==="false"||j.success===false){
-      const m=String(j.message||'');
-      throw new Error(/activat/i.test(m)?'Falta activar el formulario: revisa el correo '+EMAIL+' (y spam) y pulsa "Activate Form".':'');
+      const current=
+        parseInt(qty.value)||1;
+
+      qty.value=
+        Math.min(
+          20,
+          Math.max(
+            1,
+            current+step
+          )
+        );
+
+      updateTotal();
+
     }
-    modal.classList.add('sent');
-    toast('¡Pedido enviado! ⚽');
-  }catch(err){
-    msg.className='msg err';msg.textContent=err.message||'No se pudo enviar. Revisa tu conexión e inténtalo de nuevo.';
-    toast('No se pudo enviar el pedido',true);
-  }finally{btn.disabled=false;btn.textContent='Enviar pedido'}
+  );
+
 });
+
+
+qty.addEventListener(
+  'input',
+  updateTotal
+);
+
+
+/* =====================================
+   ABRIR PEDIDO
+===================================== */
+
+function openOrder(button){
+
+  prod={
+    nombre:button.dataset.producto,
+    valor:Number(button.dataset.valor)
+  };
+
+  $('#mTitle').textContent=
+    prod.nombre;
+
+  $('#resumen').textContent=
+    cop(prod.valor)+' c/u';
+
+  msg.textContent='';
+  msg.className='msg';
+
+  form.reset();
+
+  qty.value=1;
+
+  updateTotal();
+
+  modal.showModal();
+
+  document.body.classList.add(
+    'modal-open'
+  );
+
+}
+
+$$('[data-producto]').forEach(
+  button=>{
+    button.addEventListener(
+      'click',
+      ()=>openOrder(button)
+    );
+  }
+);
+
+
+/* =====================================
+   CERRAR MODAL
+   CORREGIDO: eliminado "lb"
+===================================== */
+
+$$('[data-close]',modal).forEach(
+  button=>{
+    button.addEventListener(
+      'click',
+      ()=>{
+        modal.close();
+        document.body.classList.remove(
+          'modal-open'
+        );
+      }
+    );
+  }
+);
+
+modal.addEventListener(
+  'close',
+  ()=>{
+    document.body.classList.remove(
+      'modal-open'
+    );
+  }
+);
+
+
+/* =====================================
+   PEDIDO
+===================================== */
+
+form.addEventListener(
+  'submit',
+  async event=>{
+
+    event.preventDefault();
+
+    const inputs=
+      $$('input',form);
+
+    const invalid=
+      inputs.filter(
+        input=>!validateInput(input)
+      );
+
+    if(invalid.length){
+
+      invalid[0].focus();
+
+      msg.className='msg err';
+
+      msg.textContent=
+        'Revisa los datos del pedido.';
+
+      return;
+
+    }
+
+    const clean=value=>
+      value.trim().replace(/\s+/g,' ');
+
+    const quantity=
+      Math.min(
+        20,
+        Math.max(
+          1,
+          Number(qty.value)||1
+        )
+      );
+
+    const data={
+
+      'Producto':prod.nombre,
+
+      'Cantidad':quantity,
+
+      'Precio unitario':
+        cop(prod.valor),
+
+      'Total a pagar':
+        cop(prod.valor*quantity),
+
+      'Nombre':
+        clean(form.nombre.value),
+
+      'Teléfono / WhatsApp':
+        clean(form.telefono.value),
+
+      'Correo':
+        clean(form.email.value),
+
+      'Ciudad':
+        clean(form.ciudad.value),
+
+      'Dirección':
+        clean(form.direccion.value),
+
+      'Fecha':
+        new Date().toLocaleString(
+          'es-CO',
+          {
+            dateStyle:'full',
+            timeStyle:'short'
+          }
+        ),
+
+      '_subject':
+        `Nuevo pedido NOVACOL - ${prod.nombre}`,
+
+      '_replyto':
+        clean(form.email.value),
+
+      '_template':
+        'table',
+
+      '_captcha':
+        'false'
+
+    };
+
+
+    btn.disabled=true;
+
+    btn.textContent=
+      'Enviando...';
+
+
+    try{
+
+      const response=
+        await fetch(
+          'https://formsubmit.co/ajax/'+EMAIL,
+          {
+            method:'POST',
+            headers:{
+              'Content-Type':
+                'application/json',
+              'Accept':
+                'application/json'
+            },
+            body:JSON.stringify(data)
+          }
+        );
+
+
+      const result=
+        await response.json()
+        .catch(()=>({}));
+
+
+      if(
+        !response.ok ||
+        result.success===false ||
+        result.success==="false"
+      ){
+
+        throw new Error(
+          'No se pudo enviar el pedido.'
+        );
+
+      }
+
+
+      modal.classList.add(
+        'sent'
+      );
+
+      toast(
+        '¡Pedido enviado! ⚽'
+      );
+
+
+    }catch(error){
+
+      msg.className='msg err';
+
+      msg.textContent=
+        'No se pudo enviar. Inténtalo nuevamente.';
+
+      toast(
+        'No se pudo enviar el pedido',
+        true
+      );
+
+    }finally{
+
+      btn.disabled=false;
+
+      btn.textContent=
+        'Enviar pedido';
+
+    }
+
+  }
+);
+
+
+/* =====================================
+   TOAST
+===================================== */
+
+let toastTimer;
+
+function toast(text,error=false){
+
+  const element=
+    $('#toast');
+
+  element.textContent=text;
+
+  element.className=
+    error
+      ? 'show err'
+      : 'show';
+
+  clearTimeout(
+    toastTimer
+  );
+
+  toastTimer=
+    setTimeout(
+      ()=>element.classList.remove('show'),
+      3500
+    );
+
+}
+
 </script>
+
 </body>
 </html>
